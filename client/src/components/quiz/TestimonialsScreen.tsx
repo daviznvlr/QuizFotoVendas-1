@@ -19,7 +19,7 @@ const testimonials: TestimonialData[] = [
   {
     name: "Roberto",
     location: "São Paulo - SP",
-    text: "Com as estratégias de precificação e divulgação, vendi mais de 100 panetones e faturei mais de R$$ 900,00 em 2 semanas",
+    text: "Com as estratégias de precificação e divulgação, vendi mais de 100 panetones e faturei mais de R$ 900,00 em 2 semanas",
     avatar: "R"
   },
   {

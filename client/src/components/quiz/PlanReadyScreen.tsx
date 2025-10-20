@@ -1,4 +1,4 @@
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import panettoneLogo from "@assets/image_1760983257175.png";
 
@@ -27,7 +27,7 @@ const benefits: Benefit[] = [
   },
   {
     title: "Baixo investimento inicial:",
-    description: "como começar o seu negócio de panetones gourmet sem gastar muito, utilizando ingredientes acessíveis e técnicas que garantem alta lucro"
+    description: "como começar o seu negócio de panetones gourmet sem gastar muito, utilizando ingredientes acessíveis e técnicas que garantem alto lucro"
   }
 ];
 
@@ -35,8 +35,9 @@ export function PlanReadyScreen({ onContinue, onBack }: PlanReadyScreenProps) {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div className="bg-yellow-300 text-center py-3 px-6">
-        <p className="text-sm font-semibold text-foreground" data-testid="text-timer">
-          00:07:56 ⏱️ Oferta por tempo limitado!
+        <p className="text-sm font-semibold text-foreground flex items-center justify-center gap-2" data-testid="text-timer">
+          <Clock className="w-4 h-4" />
+          00:07:56 Oferta por tempo limitado!
         </p>
       </div>
 
