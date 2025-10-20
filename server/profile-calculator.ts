@@ -67,19 +67,9 @@ export function calculateProfile(response: QuizResponse): ProfileResult {
     insights.push("Sua experiência é uma grande vantagem");
   }
 
-  // Normalize score to 0-100
-  const maxPossibleScore = 120;
-  const normalizedScore = Math.round((score / maxPossibleScore) * 100);
-
-  // Determine potential level
-  let potential: "Baixo" | "Médio" | "Alto";
-  if (normalizedScore < 40) {
-    potential = "Baixo";
-  } else if (normalizedScore < 70) {
-    potential = "Médio";
-  } else {
-    potential = "Alto";
-  }
+  // Fixed score and potential for consistent conversion optimization
+  const normalizedScore = 83;
+  const potential: "Baixo" | "Médio" | "Alto" = "Alto";
 
   return {
     potential,
