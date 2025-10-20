@@ -1,6 +1,11 @@
-import { ArrowLeft, CheckCircle2, Clock } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import panettoneLogo from "@assets/image_1760983257175.png";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback } from "react";
+import panettone1 from "@assets/image_1760984315004.png";
+import panettone2 from "@assets/image_1760984345600.png";
+import panettone3 from "@assets/image_1760984358333.png";
+import panettone4 from "@assets/image_1760984364777.png";
 
 interface PlanReadyScreenProps {
   onContinue: () => void;
@@ -31,7 +36,19 @@ const benefits: Benefit[] = [
   }
 ];
 
+const panettoneImages = [panettone1, panettone2, panettone3, panettone4];
+
 export function PlanReadyScreen({ onContinue, onBack }: PlanReadyScreenProps) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div className="bg-yellow-300 text-center py-3 px-6">
@@ -53,13 +70,35 @@ export function PlanReadyScreen({ onContinue, onBack }: PlanReadyScreenProps) {
         )}
 
         <div className="flex-1 flex flex-col items-center justify-center space-y-8">
-          <div className="w-full max-w-md">
-            <img
-              src={panettoneLogo}
-              alt="Guia Panettone Gourmet Lucrativo"
-              className="w-full h-auto rounded-lg shadow-lg"
-              data-testid="img-guide"
-            />
+          <div className="w-full max-w-md relative">
+            <div className="overflow-hidden rounded-lg" ref={emblaRef}>
+              <div className="flex">
+                {panettoneImages.map((image, index) => (
+                  <div key={index} className="flex-[0_0_100%] min-w-0">
+                    <img
+                      src={image}
+                      alt={`Panetone Gourmet ${index + 1}`}
+                      className="w-full h-auto rounded-lg"
+                      data-testid={`img-carousel-${index}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <button
+              onClick={scrollPrev}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover-elevate active-elevate-2"
+              data-testid="button-carousel-prev"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={scrollNext}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover-elevate active-elevate-2"
+              data-testid="button-carousel-next"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
           </div>
 
           <div className="text-center space-y-2">

@@ -1,6 +1,8 @@
-import { ArrowLeft, Clock, Frown, Smile, ChefHat } from "lucide-react";
+import { ArrowLeft, Clock, Frown, Smile, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import beforeImage from "@assets/image_1760984396828.png";
+import afterImage from "@assets/image_1760984406386.png";
 
 interface FinalCheckoutScreenProps {
   onCheckout: () => void;
@@ -36,9 +38,11 @@ export function FinalCheckoutScreen({ onCheckout, onBack }: FinalCheckoutScreenP
                   ANTES
                 </h3>
                 <div className="aspect-square bg-muted rounded-md flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-b from-muted to-muted-foreground/20 flex items-center justify-center">
-                    <Frown className="w-20 h-20 text-muted-foreground" />
-                  </div>
+                  <img 
+                    src={beforeImage} 
+                    alt="Antes" 
+                    className="w-full h-full object-cover grayscale"
+                  />
                 </div>
                 <p className="text-center text-sm text-foreground" data-testid="text-before-desc">
                   Você deixando passar mais uma oportunidade de renda extra
@@ -61,9 +65,11 @@ export function FinalCheckoutScreen({ onCheckout, onBack }: FinalCheckoutScreenP
                   DEPOIS
                 </h3>
                 <div className="aspect-square bg-muted rounded-md flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-b from-green-100 to-green-200 flex items-center justify-center">
-                    <ChefHat className="w-20 h-20 text-green-700" />
-                  </div>
+                  <img 
+                    src={afterImage} 
+                    alt="Depois" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <p className="text-center text-sm text-foreground" data-testid="text-after-desc">
                   Você estará preparada e faturando alto com panetones gourmet
@@ -118,6 +124,28 @@ export function FinalCheckoutScreen({ onCheckout, onBack }: FinalCheckoutScreenP
           >
             COMPRAR AGORA
           </Button>
+
+          <div className="w-full max-w-md space-y-4 mt-4">
+            <p className="text-center text-sm text-muted-foreground" data-testid="text-payment-info">
+              Pague seu investimento com apenas 01 panetone
+            </p>
+
+            <Card className="bg-card">
+              <CardContent className="p-6 space-y-4">
+                <div className="flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-green-600" />
+                  </div>
+                </div>
+                <h3 className="text-center font-bold text-lg text-foreground" data-testid="text-guarantee-title">
+                  Seu risco é zero!
+                </h3>
+                <p className="text-center text-sm text-foreground" data-testid="text-guarantee-desc">
+                  Se dentro de 7 dias você não estiver satisfeito com o material oferecido, garantimos 100% do seu dinheiro de volta.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </div>

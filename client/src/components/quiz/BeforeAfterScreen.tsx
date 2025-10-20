@@ -1,7 +1,9 @@
-import { ArrowLeft, Clock, Frown, Smile, ChefHat } from "lucide-react";
+import { ArrowLeft, Clock, Frown, Smile } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import panettonePlate from "@assets/image_1760983266669.png";
+import beforeImage from "@assets/image_1760984396828.png";
+import afterImage from "@assets/image_1760984406386.png";
 
 interface BeforeAfterScreenProps {
   onContinue: () => void;
@@ -46,9 +48,11 @@ export function BeforeAfterScreen({ onContinue, onBack }: BeforeAfterScreenProps
                   ANTES
                 </h3>
                 <div className="aspect-square bg-muted rounded-md flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-b from-muted to-muted-foreground/20 flex items-center justify-center">
-                    <Frown className="w-20 h-20 text-muted-foreground" />
-                  </div>
+                  <img 
+                    src={beforeImage} 
+                    alt="Antes" 
+                    className="w-full h-full object-cover grayscale"
+                  />
                 </div>
                 <p className="text-center text-sm text-foreground" data-testid="text-before-desc">
                   Você deixando passar mais uma oportunidade de renda extra
@@ -71,9 +75,11 @@ export function BeforeAfterScreen({ onContinue, onBack }: BeforeAfterScreenProps
                   DEPOIS
                 </h3>
                 <div className="aspect-square bg-muted rounded-md flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-b from-green-100 to-green-200 flex items-center justify-center">
-                    <ChefHat className="w-20 h-20 text-green-700" />
-                  </div>
+                  <img 
+                    src={afterImage} 
+                    alt="Depois" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <p className="text-center text-sm text-foreground" data-testid="text-after-desc">
                   Você estará preparada e faturando alto com panetones gourmet
