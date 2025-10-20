@@ -45,7 +45,7 @@ export function InfoScreen({ onContinue, onBack }: InfoScreenProps) {
           <Button
             onClick={onContinue}
             size="lg"
-            className="w-full h-14 text-lg font-semibold"
+            className="w-full h-14 text-lg font-semibold bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-continue"
           >
             CONTINUAR

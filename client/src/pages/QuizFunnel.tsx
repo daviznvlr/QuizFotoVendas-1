@@ -195,10 +195,10 @@ export default function QuizFunnel() {
   ];
 
   const feelingOptions: QuestionOption[] = [
-    { id: "realizada", label: "Realizada(o) por transformar algo que gosto em renda", icon: "Heart" },
-    { id: "orgulhosa", label: "Orgulhosa(o) de mostrar que consigo empreender", icon: "Smile" },
-    { id: "feliz", label: "Feliz por ter um dinheiro a mais no fim do ano", icon: "DollarSign" },
-    { id: "motivada", label: "Motivada(o) a continuar vendendo o ano todo", icon: "Zap" },
+    { id: "realizada", label: "😍 Realizada(o) por transformar algo que gosto em renda", icon: "Heart" },
+    { id: "orgulhosa", label: "😊 Orgulhosa(o) de mostrar que consigo empreender", icon: "Smile" },
+    { id: "feliz", label: "🤑 Feliz por ter um dinheiro a mais no fim do ano", icon: "DollarSign" },
+    { id: "motivada", label: "😉 Motivada(o) a continuar vendendo o ano todo", icon: "Zap" },
   ];
 
   const revenueOptions: QuestionOption[] = [
@@ -209,9 +209,9 @@ export default function QuizFunnel() {
   ];
 
   const experienceOptions: QuestionOption[] = [
-    { id: "nenhum", label: "Nenhum, mas adoro aprender coisas novas.", icon: "BookOpen" },
-    { id: "vez-quando", label: "Já faço doces de vez em quando", icon: "Coffee" },
-    { id: "experiencia", label: "Tenho experiência e quero dominar os panetones gourmet", icon: "Award" },
+    { id: "nenhum", label: "🙂 Nenhum, mas adoro aprender coisas novas.", icon: "BookOpen" },
+    { id: "vez-quando", label: "😐 Já faço doces de vez em quando", icon: "Coffee" },
+    { id: "experiencia", label: "😍 Tenho experiência e quero dominar os panetones gourmet", icon: "Award" },
   ];
 
   const obstacleOptions: QuestionOption[] = [

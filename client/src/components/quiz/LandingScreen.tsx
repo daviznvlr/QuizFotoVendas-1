@@ -40,7 +40,7 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
           <Button
             onClick={onStart}
             size="lg"
-            className="w-full h-14 text-lg font-semibold"
+            className="w-full h-14 text-lg font-semibold bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-start-quiz"
           >
             QUERO DESCOBRIR
