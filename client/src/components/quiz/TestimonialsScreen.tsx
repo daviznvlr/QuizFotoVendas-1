@@ -108,7 +108,7 @@ export function TestimonialsScreen({ onContinue, onBack }: TestimonialsScreenPro
           <Button
             onClick={onContinue}
             size="lg"
-            className="w-full max-w-md"
+            className="w-full max-w-md bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-continue"
           >
             CONTINUAR
