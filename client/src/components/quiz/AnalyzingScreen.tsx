@@ -67,8 +67,6 @@ export function AnalyzingScreen({ sessionId, onComplete, onBack }: AnalyzingScre
         <Logo />
         <div className="text-center space-y-4">
           <ProgressBar progress={77} />
-          <p className="text-lg font-semibold">Analisando suas respostas...</p>
-          <p className="text-sm text-muted-foreground">Calculando seu perfil de vendas</p>
         </div>
       </div>
     </div>
