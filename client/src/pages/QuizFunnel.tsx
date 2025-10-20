@@ -171,7 +171,9 @@ export default function QuizFunnel() {
   };
 
   const handleTestimonialsContinue = () => {
-    goToNextStep();
+    simulateLoading(() => {
+      goToNextStep();
+    }, 2000);
   };
 
   const handlePlanReadyContinue = () => {
@@ -343,13 +345,20 @@ export default function QuizFunnel() {
       )}
 
       {currentStep === 12 && (
+        <LoadingScreen 
+          progress={loadingProgress} 
+          message="Aguarde...\nSaindo um plano especial do forno para você"
+        />
+      )}
+
+      {currentStep === 13 && (
         <PlanReadyScreen
           onContinue={handlePlanReadyContinue}
           onBack={goToPrevStep}
         />
       )}
 
-      {currentStep === 13 && (
+      {currentStep === 14 && (
         <FinalCheckoutScreen
           onCheckout={handleCheckout}
           onBack={goToPrevStep}

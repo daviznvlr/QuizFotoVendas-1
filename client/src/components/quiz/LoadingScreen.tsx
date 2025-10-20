@@ -14,7 +14,7 @@ export function LoadingScreen({ progress, message = "Analisando suas respostas" 
         
         <div className="space-y-4">
           <ProgressBar progress={progress} />
-          <p className="text-center text-lg font-medium text-foreground">
+          <p className="text-center text-lg font-medium text-foreground whitespace-pre-line">
             {message}
           </p>
         </div>
