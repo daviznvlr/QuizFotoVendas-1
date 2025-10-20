@@ -1,4 +1,4 @@
-import { ArrowLeft, CheckCircle2, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
@@ -51,13 +51,6 @@ export function PlanReadyScreen({ onContinue, onBack }: PlanReadyScreenProps) {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <div className="bg-yellow-300 text-center py-3 px-6">
-        <p className="text-sm font-semibold text-foreground flex items-center justify-center gap-2" data-testid="text-timer">
-          <Clock className="w-4 h-4" />
-          00:07:56 Oferta por tempo limitado!
-        </p>
-      </div>
-
       <div className="w-full max-w-2xl mx-auto px-6 py-8 flex-1 flex flex-col">
         {onBack && (
           <button
