@@ -43,7 +43,7 @@ export function FinalOfferScreen({ onAccept, onLearnMore, onBack }: FinalOfferSc
                 data-testid="button-accept-offer"
               >
                 <div className="flex items-center gap-4">
-                  <Heart className="w-8 h-8 text-primary flex-shrink-0" />
+                  <span className="text-4xl flex-shrink-0">❤️</span>
                   <div>
                     <p className="font-semibold text-lg">Sim aceitaria!</p>
                     <p className="text-sm text-muted-foreground">É tudo o que preciso</p>
@@ -57,7 +57,7 @@ export function FinalOfferScreen({ onAccept, onLearnMore, onBack }: FinalOfferSc
                 data-testid="button-learn-more"
               >
                 <div className="flex items-center gap-4">
-                  <HelpCircle className="w-8 h-8 text-muted-foreground flex-shrink-0" />
+                  <span className="text-4xl flex-shrink-0">🤔</span>
                   <div>
                     <p className="font-semibold text-lg">Não tinha pensado nisso.</p>
                     <p className="text-sm text-muted-foreground">Mas quero saber mais</p>

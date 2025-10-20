@@ -202,10 +202,10 @@ export default function QuizFunnel() {
   ];
 
   const revenueOptions: QuestionOption[] = [
-    { id: "ate-2000", label: "Até R$2.000,00", icon: "TrendingUp" },
-    { id: "2000-5000", label: "Entre R$2.000,00 e R$ 5.000,00", icon: "TrendingUp" },
-    { id: "mais-5000", label: "Mais de R$5.000,00", icon: "TrendingUp" },
-    { id: "nao-pensei", label: "Ainda não pensei nisso, mas adoraria ter um lucro extra", icon: "HelpCircle" },
+    { id: "ate-2000", label: "💰 Até R$2.000,00", icon: "TrendingUp" },
+    { id: "2000-5000", label: "💵 Entre R$2.000,00 e R$ 5.000,00", icon: "TrendingUp" },
+    { id: "mais-5000", label: "🤑 Mais de R$5.000,00", icon: "TrendingUp" },
+    { id: "nao-pensei", label: "🤔 Ainda não pensei nisso, mas adoraria ter um lucro extra", icon: "HelpCircle" },
   ];
 
   const experienceOptions: QuestionOption[] = [
@@ -215,17 +215,17 @@ export default function QuizFunnel() {
   ];
 
   const obstacleOptions: QuestionOption[] = [
-    { id: "tempo", label: "Falta de tempo", icon: "Clock" },
-    { id: "medo", label: "Medo de não dar certo", icon: "AlertCircle" },
-    { id: "dinheiro", label: "Falta de dinheiro para investir", icon: "Wallet" },
-    { id: "nao-sei", label: "Não sei por onde começar", icon: "HelpCircle" },
+    { id: "tempo", label: "⏰ Falta de tempo", icon: "Clock" },
+    { id: "medo", label: "😰 Medo de não dar certo", icon: "AlertCircle" },
+    { id: "dinheiro", label: "💸 Falta de dinheiro para investir", icon: "Wallet" },
+    { id: "nao-sei", label: "🤷 Não sei por onde começar", icon: "HelpCircle" },
   ];
 
   const financialOptions: QuestionOption[] = [
-    { id: "vida-melhor", label: "Não conseguir dar uma vida melhor para a minha família", icon: "Home" },
-    { id: "escolher", label: "Ter que escolher entre pagar contas ou realizar sonhos", icon: "Scale" },
-    { id: "tempo-filhos", label: "Não ter tempo para os filhos, pois tenho que trabalhar fora", icon: "Users" },
-    { id: "estressada", label: "Viver estressada(o) sem segurança financeira", icon: "AlertTriangle" },
+    { id: "vida-melhor", label: "😔 Não conseguir dar uma vida melhor para a minha família", icon: "Home" },
+    { id: "escolher", label: "😞 Ter que escolher entre pagar contas ou realizar sonhos", icon: "Scale" },
+    { id: "tempo-filhos", label: "😢 Não ter tempo para os filhos, pois tenho que trabalhar fora", icon: "Users" },
+    { id: "estressada", label: "😰 Viver estressada(o) sem segurança financeira", icon: "AlertTriangle" },
   ];
 
   if (isLoading) {
