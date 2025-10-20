@@ -76,6 +76,12 @@ export function ResultsScreen({ profile, onContinue, onBack, progress }: Results
                   <p className={`text-4xl font-bold ${getPotentialColor(profile.potential)} bg-white px-6 py-2 rounded-lg`} data-testid="text-potential-label">
                     {profile.potential}
                   </p>
+                  <div className="mt-4">
+                    <p className="text-sm mb-1 opacity-90">Rank Score:</p>
+                    <p className="text-2xl font-bold" data-testid="text-rank-score">
+                      82/100
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
