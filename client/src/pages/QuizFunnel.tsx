@@ -347,7 +347,7 @@ export default function QuizFunnel() {
       {currentStep === 12 && (
         <LoadingScreen 
           progress={loadingProgress} 
-          message="Aguarde...\nSaindo um plano especial do forno para você"
+          message="Aguarde... Saindo um plano especial do forno para você"
         />
       )}
 
