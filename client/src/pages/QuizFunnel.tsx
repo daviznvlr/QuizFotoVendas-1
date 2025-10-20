@@ -9,7 +9,6 @@ import { FinalOfferScreen } from "@/components/quiz/FinalOfferScreen";
 import { LoadingScreen } from "@/components/quiz/LoadingScreen";
 import { TestimonialsScreen } from "@/components/quiz/TestimonialsScreen";
 import { PlanReadyScreen } from "@/components/quiz/PlanReadyScreen";
-import { BeforeAfterScreen } from "@/components/quiz/BeforeAfterScreen";
 import { FinalCheckoutScreen } from "@/components/quiz/FinalCheckoutScreen";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -176,10 +175,6 @@ export default function QuizFunnel() {
   };
 
   const handlePlanReadyContinue = () => {
-    goToNextStep();
-  };
-
-  const handleBeforeAfterContinue = () => {
     goToNextStep();
   };
 
@@ -355,13 +350,6 @@ export default function QuizFunnel() {
       )}
 
       {currentStep === 13 && (
-        <BeforeAfterScreen
-          onContinue={handleBeforeAfterContinue}
-          onBack={goToPrevStep}
-        />
-      )}
-
-      {currentStep === 14 && (
         <FinalCheckoutScreen
           onCheckout={handleCheckout}
           onBack={goToPrevStep}

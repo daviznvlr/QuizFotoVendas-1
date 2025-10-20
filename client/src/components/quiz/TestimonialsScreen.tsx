@@ -2,12 +2,16 @@ import { ArrowLeft, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import robertaImg from "@assets/roberta_1760985169436.jpg";
+import claudiaImg from "@assets/25399800_1760985173803.jpg";
+import helenaImg from "@assets/helena_1760985175662.jpg";
 
 interface TestimonialData {
   name: string;
   location: string;
   text: string;
   avatar: string;
+  image: string;
 }
 
 interface TestimonialsScreenProps {
@@ -17,22 +21,25 @@ interface TestimonialsScreenProps {
 
 const testimonials: TestimonialData[] = [
   {
-    name: "Roberto",
+    name: "Roberta",
     location: "São Paulo - SP",
     text: "Com as estratégias de precificação e divulgação, vendi mais de 100 panetones e faturei mais de R$ 900,00 em 2 semanas",
-    avatar: "R"
+    avatar: "R",
+    image: robertaImg
   },
   {
     name: "Cláudia",
     location: "Vitória - ES",
     text: "As receitas são fáceis e de custo baixo. As dicas de vendas me ajudaram muito. Já tenho clientes fiéis para o próximo ano.",
-    avatar: "C"
+    avatar: "C",
+    image: claudiaImg
   },
   {
     name: "Helena",
     location: "Uberlândia, MG",
     text: "Nunca tinha vendido nada antes. Com esse método vendi 87 panetones e faturei R$4.300,00",
-    avatar: "H"
+    avatar: "H",
+    image: helenaImg
   }
 ];
 
@@ -66,7 +73,10 @@ export function TestimonialsScreen({ onContinue, onBack }: TestimonialsScreenPro
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12">
-                      <AvatarImage src="" />
+                      <AvatarImage 
+                        src={testimonial.image} 
+                        className="object-cover object-top"
+                      />
                       <AvatarFallback className="bg-primary text-primary-foreground">
                         {testimonial.avatar}
                       </AvatarFallback>
