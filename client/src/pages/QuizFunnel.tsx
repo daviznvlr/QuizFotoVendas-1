@@ -7,6 +7,10 @@ import { ResultsScreen } from "@/components/quiz/ResultsScreen";
 import { AnalyzingScreen } from "@/components/quiz/AnalyzingScreen";
 import { FinalOfferScreen } from "@/components/quiz/FinalOfferScreen";
 import { LoadingScreen } from "@/components/quiz/LoadingScreen";
+import { TestimonialsScreen } from "@/components/quiz/TestimonialsScreen";
+import { PlanReadyScreen } from "@/components/quiz/PlanReadyScreen";
+import { BeforeAfterScreen } from "@/components/quiz/BeforeAfterScreen";
+import { FinalCheckoutScreen } from "@/components/quiz/FinalCheckoutScreen";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import type { QuizState, ProfileResult } from "@shared/schema";
@@ -164,13 +168,28 @@ export default function QuizFunnel() {
 
   const handleFinalAnswer = async (finalAnswer: string) => {
     await updateQuizState({ finalAnswer });
-    
+    goToNextStep();
+  };
+
+  const handleTestimonialsContinue = () => {
+    goToNextStep();
+  };
+
+  const handlePlanReadyContinue = () => {
+    goToNextStep();
+  };
+
+  const handleBeforeAfterContinue = () => {
+    goToNextStep();
+  };
+
+  const handleCheckout = async () => {
     toast({
-      title: "Quiz concluído!",
-      description: "Obrigado por responder ao quiz. Em breve você receberá mais informações.",
+      title: "Obrigado!",
+      description: "Você será redirecionado para finalizar sua compra.",
     });
     
-    console.log("Quiz completo:", { ...quizState, finalAnswer, sessionId });
+    console.log("Quiz completo - Checkout:", { ...quizState, sessionId });
   };
 
   const ageOptions: QuestionOption[] = [
@@ -320,6 +339,34 @@ export default function QuizFunnel() {
         <FinalOfferScreen
           onAccept={() => handleFinalAnswer("sim")}
           onLearnMore={() => handleFinalAnswer("saber-mais")}
+          onBack={goToPrevStep}
+        />
+      )}
+
+      {currentStep === 11 && (
+        <TestimonialsScreen
+          onContinue={handleTestimonialsContinue}
+          onBack={goToPrevStep}
+        />
+      )}
+
+      {currentStep === 12 && (
+        <PlanReadyScreen
+          onContinue={handlePlanReadyContinue}
+          onBack={goToPrevStep}
+        />
+      )}
+
+      {currentStep === 13 && (
+        <BeforeAfterScreen
+          onContinue={handleBeforeAfterContinue}
+          onBack={goToPrevStep}
+        />
+      )}
+
+      {currentStep === 14 && (
+        <FinalCheckoutScreen
+          onCheckout={handleCheckout}
           onBack={goToPrevStep}
         />
       )}
