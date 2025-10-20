@@ -292,7 +292,6 @@ export default function QuizFunnel() {
           options={experienceOptions}
           onSelect={handleExperienceSelect}
           onBack={goToPrevStep}
-          progress={77}
           selectedValue={quizState.experience}
         />
       )}
@@ -310,7 +309,6 @@ export default function QuizFunnel() {
           profile={calculatedProfile}
           onContinue={handlePotentialSelect}
           onBack={goToPrevStep}
-          progress={77}
         />
       )}
 
@@ -330,7 +328,6 @@ export default function QuizFunnel() {
           options={financialOptions}
           onSelect={handleFinancialConcernSelect}
           onBack={goToPrevStep}
-          progress={72}
           selectedValue={quizState.financialConcern}
         />
       )}

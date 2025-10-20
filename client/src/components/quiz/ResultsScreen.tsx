@@ -8,7 +8,7 @@ interface ResultsScreenProps {
   profile: ProfileResult;
   onContinue: (potential: string) => void;
   onBack?: () => void;
-  progress: number;
+  progress?: number;
 }
 
 export function ResultsScreen({ profile, onContinue, onBack, progress }: ResultsScreenProps) {
@@ -56,9 +56,11 @@ export function ResultsScreen({ profile, onContinue, onBack, progress }: Results
             <Logo />
           </div>
 
-          <div className="mb-8">
-            <ProgressBar progress={progress} />
-          </div>
+          {progress !== undefined && (
+            <div className="mb-8">
+              <ProgressBar progress={progress} />
+            </div>
+          )}
 
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 leading-tight">
             Parabéns!!! Você tem o perfil ideal para lucrar com panetones gourmet
@@ -75,17 +77,6 @@ export function ResultsScreen({ profile, onContinue, onBack, progress }: Results
                     {profile.potential}
                   </p>
                 </div>
-
-                <div className="w-full bg-white/20 h-3 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-white transition-all duration-1000"
-                    style={{ width: `${profile.score}%` }}
-                  />
-                </div>
-                
-                <p className="text-sm text-white/90">
-                  Pontuação: {profile.score}/100
-                </p>
               </div>
             </div>
 

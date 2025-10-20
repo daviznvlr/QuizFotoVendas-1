@@ -1,7 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
-import marketImage from "@assets/image_1760981315050.png";
+import marketImage from "@assets/image_1760983973269.png";
 
 interface InfoScreenProps {
   onContinue: () => void;

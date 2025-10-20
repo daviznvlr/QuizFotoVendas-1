@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
-import panetoneImage from "@assets/image_1760981301235.png";
+import panetoneImage from "@assets/image_1760983922799.png";
 
 interface LandingScreenProps {
   onStart: () => void;
