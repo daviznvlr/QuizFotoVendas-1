@@ -89,15 +89,7 @@ export function QuestionScreen({
                 )}
                 data-testid={`option-${option.id}`}
               >
-                <div className="flex items-center gap-4">
-                  {option.icon && iconMap[option.icon] && (
-                    (() => {
-                      const IconComponent = iconMap[option.icon];
-                      return <IconComponent className="w-6 h-6 flex-shrink-0 text-primary" />;
-                    })()
-                  )}
-                  <span className="text-base font-medium">{option.label}</span>
-                </div>
+                <span className="text-base font-medium">{option.label}</span>
               </button>
             ))}
           </div>

@@ -264,6 +264,12 @@
     animation: pulse-scale 2s ease-in-out infinite;
   }
 
+  /* Increase emoji size in quiz options */
+  button[data-testid^="option-"] span {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   /* Placeholder styling for contentEditable div */
   [contenteditable][data-placeholder]:empty::before {
     content: attr(data-placeholder);
