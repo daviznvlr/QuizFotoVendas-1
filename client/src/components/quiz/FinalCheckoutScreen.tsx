@@ -137,7 +137,7 @@ export function FinalCheckoutScreen({ onCheckout, onBack }: FinalCheckoutScreenP
           <Button
             onClick={onCheckout}
             size="lg"
-            className="w-full max-w-md bg-green-600 hover:bg-green-700 text-white"
+            className="w-full max-w-md bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-checkout"
           >
             COMPRAR AGORA

@@ -102,7 +102,7 @@ export function ResultsScreen({ profile, onContinue, onBack, progress }: Results
           <Button
             onClick={handleContinue}
             size="lg"
-            className="w-full h-14 text-lg font-semibold mt-8"
+            className="w-full h-14 text-lg font-semibold mt-8 bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-continue"
           >
             Continuar

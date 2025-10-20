@@ -250,6 +250,20 @@
     @apply hidden;
   }
 
+  /* Pulse animation for CTA buttons */
+  @keyframes pulse-scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+
+  .animate-pulse-cta {
+    animation: pulse-scale 2s ease-in-out infinite;
+  }
+
   /* Placeholder styling for contentEditable div */
   [contenteditable][data-placeholder]:empty::before {
     content: attr(data-placeholder);
