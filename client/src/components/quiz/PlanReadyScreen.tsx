@@ -1,4 +1,4 @@
-import { ArrowLeft, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
@@ -9,7 +9,6 @@ import panettone4 from "@assets/image_1761361693596.png";
 
 interface PlanReadyScreenProps {
   onContinue: () => void;
-  onBack?: () => void;
 }
 
 interface Benefit {
@@ -38,7 +37,7 @@ const benefits: Benefit[] = [
 
 const panettoneImages = [panettone1, panettone2, panettone3, panettone4];
 
-export function PlanReadyScreen({ onContinue, onBack }: PlanReadyScreenProps) {
+export function PlanReadyScreen({ onContinue }: PlanReadyScreenProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   const scrollPrev = useCallback(() => {
@@ -52,16 +51,6 @@ export function PlanReadyScreen({ onContinue, onBack }: PlanReadyScreenProps) {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div className="w-full max-w-2xl mx-auto px-6 py-8 flex-1 flex flex-col">
-        {onBack && (
-          <button
-            onClick={onBack}
-            className="mb-6 inline-flex items-center gap-2 text-muted-foreground hover-elevate active-elevate-2 p-2 rounded-md transition-colors self-start"
-            data-testid="button-back"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-        )}
-
         <div className="flex-1 flex flex-col items-center justify-center space-y-8">
           <div className="w-full max-w-md relative">
             <div className="overflow-hidden rounded-lg" ref={emblaRef}>

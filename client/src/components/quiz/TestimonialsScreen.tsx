@@ -1,4 +1,4 @@
-import { ArrowLeft, Star, Quote } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -16,7 +16,6 @@ interface TestimonialData {
 
 interface TestimonialsScreenProps {
   onContinue: () => void;
-  onBack?: () => void;
 }
 
 const testimonials: TestimonialData[] = [
@@ -43,20 +42,10 @@ const testimonials: TestimonialData[] = [
   }
 ];
 
-export function TestimonialsScreen({ onContinue, onBack }: TestimonialsScreenProps) {
+export function TestimonialsScreen({ onContinue }: TestimonialsScreenProps) {
   return (
     <div className="min-h-screen bg-background flex flex-col" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="w-full max-w-2xl mx-auto px-6 py-8 flex-1 flex flex-col">
-        {onBack && (
-          <button
-            onClick={onBack}
-            className="mb-6 inline-flex items-center gap-2 text-muted-foreground hover-elevate active-elevate-2 p-2 rounded-md transition-colors self-start"
-            data-testid="button-back"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-        )}
-
         <div className="flex-1 flex flex-col items-center justify-center space-y-8">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground" data-testid="text-title">

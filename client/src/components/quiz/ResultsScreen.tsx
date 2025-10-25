@@ -1,4 +1,4 @@
-import { ArrowLeft, TrendingUp, Award, Target } from "lucide-react";
+import { TrendingUp, Award, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
 import { ProgressBar } from "./ProgressBar";
@@ -7,11 +7,10 @@ import type { ProfileResult } from "@shared/schema";
 interface ResultsScreenProps {
   profile: ProfileResult;
   onContinue: (potential: string) => void;
-  onBack?: () => void;
   progress?: number;
 }
 
-export function ResultsScreen({ profile, onContinue, onBack, progress }: ResultsScreenProps) {
+export function ResultsScreen({ profile, onContinue, progress }: ResultsScreenProps) {
   const handleContinue = () => {
     onContinue(profile.potential);
   };
@@ -42,16 +41,6 @@ export function ResultsScreen({ profile, onContinue, onBack, progress }: Results
     <div className="min-h-screen bg-background flex flex-col">
       <div className="flex-1 flex flex-col px-6 py-8">
         <div className="w-full max-w-md mx-auto flex-1 flex flex-col">
-          {onBack && (
-            <button
-              onClick={onBack}
-              className="self-start mb-4 p-2 hover-elevate active-elevate-2 rounded-md transition-all"
-              data-testid="button-back"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-          )}
-
           <div className="mb-8">
             <Logo />
           </div>

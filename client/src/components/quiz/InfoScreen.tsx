@@ -1,28 +1,16 @@
-import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
 import marketImage from "@assets/image_1760983973269.png";
 
 interface InfoScreenProps {
   onContinue: () => void;
-  onBack?: () => void;
 }
 
-export function InfoScreen({ onContinue, onBack }: InfoScreenProps) {
+export function InfoScreen({ onContinue }: InfoScreenProps) {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div className="flex-1 flex flex-col px-6 py-8">
         <div className="w-full max-w-md mx-auto flex-1 flex flex-col">
-          {onBack && (
-            <button
-              onClick={onBack}
-              className="self-start mb-4 p-2 hover-elevate active-elevate-2 rounded-md transition-all"
-              data-testid="button-back"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-          )}
-
           <div className="mb-8">
             <Logo />
           </div>

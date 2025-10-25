@@ -259,13 +259,12 @@ export default function QuizFunnel() {
           question="Qual a sua idade?"
           options={ageOptions}
           onSelect={handleAgeSelect}
-          onBack={goToPrevStep}
           selectedValue={quizState.age}
         />
       )}
 
       {currentStep === 2 && (
-        <InfoScreen onContinue={handleInfoContinue} onBack={goToPrevStep} />
+        <InfoScreen onContinue={handleInfoContinue} />
       )}
 
       {currentStep === 3 && (
@@ -273,7 +272,6 @@ export default function QuizFunnel() {
           question="Como se sentiria se conseguisse fazer e vender panetones neste fim de ano?"
           options={feelingOptions}
           onSelect={handleFeelingSelect}
-          onBack={goToPrevStep}
           selectedValue={quizState.feeling}
         />
       )}
@@ -283,7 +281,6 @@ export default function QuizFunnel() {
           question="Quanto você gostaria de faturar com panetones neste Natal?"
           options={revenueOptions}
           onSelect={handleRevenueSelect}
-          onBack={goToPrevStep}
           selectedValue={quizState.revenueGoal}
         />
       )}
@@ -293,7 +290,6 @@ export default function QuizFunnel() {
           question="Qual é o seu nível de experiência na cozinha?"
           options={experienceOptions}
           onSelect={handleExperienceSelect}
-          onBack={goToPrevStep}
           selectedValue={quizState.experience}
         />
       )}
@@ -302,7 +298,6 @@ export default function QuizFunnel() {
         <ResultsScreen
           profile={calculatedProfile}
           onContinue={handlePotentialSelect}
-          onBack={goToPrevStep}
         />
       )}
 
@@ -311,7 +306,6 @@ export default function QuizFunnel() {
           question="O que mais te impede de começar algo novo para ganhar uma renda extra?"
           options={obstacleOptions}
           onSelect={handleObstacleSelect}
-          onBack={goToPrevStep}
           selectedValue={quizState.obstacle}
         />
       )}
@@ -321,7 +315,6 @@ export default function QuizFunnel() {
           question="O que mais te preocupa na sua situação financeira atual?"
           options={financialOptions}
           onSelect={handleFinancialConcernSelect}
-          onBack={goToPrevStep}
           selectedValue={quizState.financialConcern}
         />
       )}
@@ -330,14 +323,12 @@ export default function QuizFunnel() {
         <FinalOfferScreen
           onAccept={() => handleFinalAnswer("sim")}
           onLearnMore={() => handleFinalAnswer("saber-mais")}
-          onBack={goToPrevStep}
         />
       )}
 
       {currentStep === 11 && (
         <TestimonialsScreen
           onContinue={handleTestimonialsContinue}
-          onBack={goToPrevStep}
         />
       )}
 
@@ -351,14 +342,12 @@ export default function QuizFunnel() {
       {currentStep === 13 && (
         <PlanReadyScreen
           onContinue={handlePlanReadyContinue}
-          onBack={goToPrevStep}
         />
       )}
 
       {currentStep === 14 && (
         <FinalCheckoutScreen
           onCheckout={handleCheckout}
-          onBack={goToPrevStep}
         />
       )}
     </>

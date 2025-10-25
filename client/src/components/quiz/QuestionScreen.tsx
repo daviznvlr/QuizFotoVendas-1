@@ -1,4 +1,4 @@
-import { ArrowLeft, Heart, Smile, DollarSign, Zap, TrendingUp, HelpCircle, BookOpen, Coffee, Award, Clock, AlertCircle, Wallet, Home, Scale, Users, AlertTriangle } from "lucide-react";
+import { Heart, Smile, DollarSign, Zap, TrendingUp, HelpCircle, BookOpen, Coffee, Award, Clock, AlertCircle, Wallet, Home, Scale, Users, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
 import { ProgressBar } from "./ProgressBar";
@@ -33,7 +33,6 @@ interface QuestionScreenProps {
   question: string;
   options: QuestionOption[];
   onSelect: (optionId: string) => void;
-  onBack?: () => void;
   progress?: number;
   selectedValue?: string;
 }
@@ -42,7 +41,6 @@ export function QuestionScreen({
   question,
   options,
   onSelect,
-  onBack,
   progress,
   selectedValue,
 }: QuestionScreenProps) {
@@ -50,16 +48,6 @@ export function QuestionScreen({
     <div className="min-h-screen bg-background flex flex-col">
       <div className="flex-1 flex flex-col px-6 py-8">
         <div className="w-full max-w-md mx-auto flex-1 flex flex-col">
-          {onBack && (
-            <button
-              onClick={onBack}
-              className="self-start mb-4 p-2 hover-elevate active-elevate-2 rounded-md transition-all"
-              data-testid="button-back"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-          )}
-
           <div className="mb-8">
             <Logo />
           </div>

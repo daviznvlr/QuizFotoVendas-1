@@ -1,28 +1,17 @@
-import { ArrowLeft, Heart, HelpCircle } from "lucide-react";
+import { Heart, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
 
 interface FinalOfferScreenProps {
   onAccept: () => void;
   onLearnMore: () => void;
-  onBack?: () => void;
 }
 
-export function FinalOfferScreen({ onAccept, onLearnMore, onBack }: FinalOfferScreenProps) {
+export function FinalOfferScreen({ onAccept, onLearnMore }: FinalOfferScreenProps) {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div className="flex-1 flex flex-col px-6 py-8">
         <div className="w-full max-w-md mx-auto flex-1 flex flex-col">
-          {onBack && (
-            <button
-              onClick={onBack}
-              className="self-start mb-4 p-2 hover-elevate active-elevate-2 rounded-md transition-all"
-              data-testid="button-back"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-          )}
-
           <div className="mb-8">
             <Logo />
           </div>

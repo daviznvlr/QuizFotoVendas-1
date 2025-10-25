@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowLeft, Clock, Frown, Smile, CheckCircle } from "lucide-react";
+import { Clock, Frown, Smile, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import beforeImage from "@assets/image_1760984396828.png";
@@ -7,10 +7,9 @@ import afterImage from "@assets/image_1760984406386.png";
 
 interface FinalCheckoutScreenProps {
   onCheckout: () => void;
-  onBack?: () => void;
 }
 
-export function FinalCheckoutScreen({ onCheckout, onBack }: FinalCheckoutScreenProps) {
+export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
   const [timeLeft, setTimeLeft] = useState(480);
 
   useEffect(() => {
@@ -38,16 +37,6 @@ export function FinalCheckoutScreen({ onCheckout, onBack }: FinalCheckoutScreenP
       </div>
 
       <div className="w-full max-w-2xl mx-auto px-6 py-8 flex-1 flex flex-col">
-        {onBack && (
-          <button
-            onClick={onBack}
-            className="mb-6 inline-flex items-center gap-2 text-muted-foreground hover-elevate active-elevate-2 p-2 rounded-md transition-colors self-start"
-            data-testid="button-back"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-        )}
-
         <div className="flex-1 flex flex-col items-center justify-center space-y-8">
           <div className="w-full grid grid-cols-2 gap-4">
             <Card className="bg-card" data-testid="card-before">
