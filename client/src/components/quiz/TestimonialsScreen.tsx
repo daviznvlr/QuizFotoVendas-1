@@ -45,7 +45,7 @@ const testimonials: TestimonialData[] = [
 
 export function TestimonialsScreen({ onContinue, onBack }: TestimonialsScreenProps) {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="w-full max-w-2xl mx-auto px-6 py-8 flex-1 flex flex-col">
         {onBack && (
           <button
