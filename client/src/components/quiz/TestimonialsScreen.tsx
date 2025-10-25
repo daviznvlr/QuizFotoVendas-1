@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -57,27 +57,24 @@ export function TestimonialsScreen({ onContinue }: TestimonialsScreenProps) {
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-card border-2 shadow-md hover-elevate" data-testid={`card-testimonial-${index}`}>
                 <CardContent className="p-5 space-y-3">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-3 flex-1">
-                      <Avatar className="h-14 w-14 border-2 border-primary/20">
-                        <AvatarImage 
-                          src={testimonial.image} 
-                          className="object-cover object-top"
-                        />
-                        <AvatarFallback className="bg-primary text-primary-foreground font-semibold">
-                          {testimonial.avatar}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <h3 className="font-bold text-foreground" data-testid={`text-name-${index}`}>
-                          {testimonial.name}
-                        </h3>
-                        <p className="text-xs text-muted-foreground" data-testid={`text-location-${index}`}>
-                          {testimonial.location}
-                        </p>
-                      </div>
+                  <div className="flex items-center gap-3">
+                    <Avatar className="h-14 w-14 border-2 border-primary/20">
+                      <AvatarImage 
+                        src={testimonial.image} 
+                        className="object-cover object-top"
+                      />
+                      <AvatarFallback className="bg-primary text-primary-foreground font-semibold">
+                        {testimonial.avatar}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h3 className="font-bold text-foreground" data-testid={`text-name-${index}`}>
+                        {testimonial.name}
+                      </h3>
+                      <p className="text-xs text-muted-foreground" data-testid={`text-location-${index}`}>
+                        {testimonial.location}
+                      </p>
                     </div>
-                    <Quote className="w-6 h-6 text-primary/30 flex-shrink-0" />
                   </div>
                   
                   <div className="flex gap-0.5 mb-2" data-testid={`stars-${index}`}>
