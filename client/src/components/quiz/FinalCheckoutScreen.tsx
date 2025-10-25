@@ -103,77 +103,77 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
           </div>
 
           <Card className="w-full max-w-md bg-card border-[3px] border-yellow-600/80 rounded-2xl" data-testid="card-offer">
-            <CardContent className="p-8 space-y-5">
-              <div className="text-center space-y-2">
-                <h2 className="text-2xl font-bold text-foreground" data-testid="text-offer-title">
+            <CardContent className="p-5 space-y-3">
+              <div className="text-center space-y-1">
+                <h2 className="text-xl font-bold text-foreground" data-testid="text-offer-title">
                   Receitas Completas
                 </h2>
-                <p className="text-sm text-muted-foreground" data-testid="text-offer-subtitle">
+                <p className="text-xs text-muted-foreground" data-testid="text-offer-subtitle">
                   A experiência completa para faturar alto com panetones gourmet.
                 </p>
               </div>
 
-              <div className="text-center space-y-1">
-                <p className="text-sm text-muted-foreground line-through" data-testid="text-price-old">
+              <div className="text-center space-y-0.5">
+                <p className="text-xs text-muted-foreground line-through" data-testid="text-price-old">
                   de R$ 97,00
                 </p>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-xl font-semibold text-foreground">R$</span>
-                  <span className="text-6xl font-bold text-foreground" data-testid="text-price-new">
+                <div className="flex items-baseline justify-center gap-0.5">
+                  <span className="text-base font-semibold text-foreground">R$</span>
+                  <span className="text-4xl font-bold text-foreground" data-testid="text-price-new">
                     39
                   </span>
-                  <span className="text-2xl font-bold text-foreground">,90</span>
+                  <span className="text-xl font-bold text-foreground">,90</span>
                 </div>
               </div>
 
-              <div className="bg-yellow-400 rounded-lg py-2 px-4 text-center">
-                <p className="text-sm font-semibold text-foreground" data-testid="text-savings">
+              <div className="bg-yellow-400 rounded-lg py-1.5 px-3 text-center">
+                <p className="text-xs font-semibold text-foreground" data-testid="text-savings">
                   Economize R$ 57,10
                 </p>
               </div>
 
-              <div className="space-y-3 py-2">
-                <div className="flex items-start gap-3" data-testid="item-receitas-basicas">
-                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+              <div className="space-y-2 py-1">
+                <div className="flex items-start gap-2" data-testid="item-receitas-basicas">
+                  <div className="w-4 h-4 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
                   </div>
-                  <p className="text-sm text-foreground">
+                  <p className="text-xs text-foreground">
                     Todas as Receitas Básicas
                   </p>
                 </div>
 
-                <div className="flex items-start gap-3" data-testid="item-bonus-recheios">
-                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                <div className="flex items-start gap-2" data-testid="item-bonus-recheios">
+                  <div className="w-4 h-4 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
                   </div>
-                  <p className="text-sm text-foreground">
+                  <p className="text-xs text-foreground">
                     Bônus: Recheios Gourmet Exclusivos
                   </p>
                 </div>
 
-                <div className="flex items-start gap-3" data-testid="item-bonus-coberturas">
-                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                <div className="flex items-start gap-2" data-testid="item-bonus-coberturas">
+                  <div className="w-4 h-4 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
                   </div>
-                  <p className="text-sm text-foreground">
+                  <p className="text-xs text-foreground">
                     Bônus: Coberturas Irresistíveis
                   </p>
                 </div>
 
-                <div className="flex items-start gap-3" data-testid="item-bonus-precificacao">
-                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                <div className="flex items-start gap-2" data-testid="item-bonus-precificacao">
+                  <div className="w-4 h-4 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
                   </div>
-                  <p className="text-sm text-foreground">
+                  <p className="text-xs text-foreground">
                     Bônus: Guia de Precificação
                   </p>
                 </div>
 
-                <div className="flex items-start gap-3" data-testid="item-bonus-marketing">
-                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                <div className="flex items-start gap-2" data-testid="item-bonus-marketing">
+                  <div className="w-4 h-4 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
                   </div>
-                  <p className="text-sm text-foreground">
+                  <p className="text-xs text-foreground">
                     Bônus: Estratégias de Marketing
                   </p>
                 </div>
@@ -181,8 +181,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
 
               <Button
                 onClick={onCheckout}
-                size="lg"
-                className="w-full bg-yellow-500 hover:bg-yellow-600 text-foreground font-bold text-base py-6 rounded-lg"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-foreground font-bold text-sm py-5 rounded-lg"
                 data-testid="button-checkout"
               >
                 Comprar Agora
