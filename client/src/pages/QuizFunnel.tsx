@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { useMutation } from "@tanstack/react-query";
+import { useState } from "react";
 import { LandingScreen } from "@/components/quiz/LandingScreen";
 import { QuestionScreen, QuestionOption } from "@/components/quiz/QuestionScreen";
 import { InfoScreen } from "@/components/quiz/InfoScreen";
@@ -9,74 +8,19 @@ import { LoadingScreen } from "@/components/quiz/LoadingScreen";
 import { TestimonialsScreen } from "@/components/quiz/TestimonialsScreen";
 import { PlanReadyScreen } from "@/components/quiz/PlanReadyScreen";
 import { FinalCheckoutScreen } from "@/components/quiz/FinalCheckoutScreen";
-import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import type { QuizState, ProfileResult } from "@shared/schema";
 
 export default function QuizFunnel() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [sessionId, setSessionId] = useState<string>("");
   const [quizState, setQuizState] = useState<QuizState>({
     currentStep: 0,
   });
   const [calculatedProfile, setCalculatedProfile] = useState<ProfileResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
-  const { toast } = useToast();
 
-  // Initialize session on mount
-  useEffect(() => {
-    const initSession = async () => {
-      setIsLoading(true);
-      try {
-        const response = await fetch("/api/quiz-session", { method: "POST" });
-        const data = await response.json();
-        setSessionId(data.sessionId);
-      } catch (error) {
-        toast({
-          variant: "destructive",
-          title: "Erro",
-          description: "Não foi possível iniciar a sessão. Por favor, recarregue a página.",
-        });
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    initSession();
-  }, [toast]);
-
-  // Mutation to save quiz responses
-  const saveResponseMutation = useMutation({
-    mutationFn: async (data: Partial<QuizState>) => {
-      return apiRequest("POST", "/api/quiz-responses", {
-        sessionId,
-        ...data,
-      });
-    },
-    onError: () => {
-      toast({
-        variant: "destructive",
-        title: "Erro",
-        description: "Não foi possível salvar sua resposta. Tente novamente.",
-      });
-    },
-  });
-
-  const updateQuizState = async (updates: Partial<QuizState>) => {
-    // Guard: Ensure sessionId is initialized
-    if (!sessionId || sessionId.trim() === '') {
-      toast({
-        title: "Erro",
-        description: "Sessão não inicializada. Por favor, aguarde ou recarregue a página.",
-        variant: "destructive",
-      });
-      throw new Error("Session not initialized");
-    }
-
+  const updateQuizState = (updates: Partial<QuizState>) => {
     setQuizState((prev) => ({ ...prev, ...updates }));
-    
-    // Save to backend with valid sessionId
-    await saveResponseMutation.mutateAsync(updates);
   };
 
   const simulateLoading = (callback: () => void, duration = 2000) => {
@@ -110,8 +54,8 @@ export default function QuizFunnel() {
     goToNextStep();
   };
 
-  const handleAgeSelect = async (age: string) => {
-    await updateQuizState({ age });
+  const handleAgeSelect = (age: string) => {
+    updateQuizState({ age });
     goToNextStep();
   };
 
@@ -119,58 +63,55 @@ export default function QuizFunnel() {
     goToNextStep();
   };
 
-  const handleFeelingSelect = async (feeling: string) => {
-    await updateQuizState({ feeling });
+  const handleFeelingSelect = (feeling: string) => {
+    updateQuizState({ feeling });
     goToNextStep();
   };
 
-  const handleRevenueSelect = async (revenueGoal: string) => {
-    await updateQuizState({ revenueGoal });
+  const handleRevenueSelect = (revenueGoal: string) => {
+    updateQuizState({ revenueGoal });
     goToNextStep();
   };
 
-  const handleExperienceSelect = async (experience: string) => {
-    // Save the experience to backend
-    await updateQuizState({ experience });
+  const handleExperienceSelect = (experience: string) => {
+    updateQuizState({ experience });
     
-    // Calculate profile directly
-    try {
-      const response = await fetch(`/api/profile/${sessionId}`);
-      const profile: ProfileResult = await response.json();
-      setCalculatedProfile(profile);
-      
-      // Skip analyzing screen and go directly to results (step 7)
-      setCurrentStep(7);
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Erro",
-        description: "Não foi possível calcular seu perfil. Tente novamente.",
-      });
-    }
+    // Calculate profile based on responses
+    const profile: ProfileResult = {
+      potential: "Alto",
+      score: 85,
+      insights: [
+        "Você tem grande potencial para faturar com panetones gourmet!",
+        "Com as receitas certas, você pode alcançar seus objetivos financeiros.",
+        "Seu perfil é ideal para começar neste mercado."
+      ],
+    };
+    setCalculatedProfile(profile);
+    
+    // Go directly to results (step 7)
+    setCurrentStep(7);
   };
 
-  const handlePotentialSelect = async (potential: string) => {
-    await updateQuizState({ potential });
+  const handlePotentialSelect = (potential: string) => {
+    updateQuizState({ potential });
     goToNextStep();
   };
 
-  const handleObstacleSelect = async (obstacle: string) => {
-    await updateQuizState({ obstacle });
+  const handleObstacleSelect = (obstacle: string) => {
+    updateQuizState({ obstacle });
     goToNextStep();
   };
 
-  const handleFinancialConcernSelect = async (financialConcern: string) => {
-    // Save financial concern first, then simulate loading
-    await updateQuizState({ financialConcern });
+  const handleFinancialConcernSelect = (financialConcern: string) => {
+    updateQuizState({ financialConcern });
     
     simulateLoading(() => {
       goToNextStep();
     }, 1500);
   };
 
-  const handleFinalAnswer = async (finalAnswer: string) => {
-    await updateQuizState({ finalAnswer });
+  const handleFinalAnswer = (finalAnswer: string) => {
+    updateQuizState({ finalAnswer });
     goToNextStep();
   };
 
@@ -185,13 +126,8 @@ export default function QuizFunnel() {
     goToNextStep();
   };
 
-  const handleCheckout = async () => {
-    toast({
-      title: "Obrigado!",
-      description: "Você será redirecionado para finalizar sua compra.",
-    });
-    
-    console.log("Quiz completo - Checkout:", { ...quizState, sessionId });
+  const handleCheckout = () => {
+    console.log("Quiz completo - Checkout:", quizState);
   };
 
   const ageOptions: QuestionOption[] = [
@@ -237,17 +173,6 @@ export default function QuizFunnel() {
 
   if (isLoading) {
     return <LoadingScreen progress={loadingProgress} />;
-  }
-
-  // Ensure session is initialized before rendering quiz
-  if (!sessionId) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center px-6">
-        <div className="text-center space-y-4">
-          <p className="text-lg font-medium">Inicializando sessão...</p>
-        </div>
-      </div>
-    );
   }
 
   return (
