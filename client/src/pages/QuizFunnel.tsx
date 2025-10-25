@@ -176,7 +176,8 @@ export default function QuizFunnel() {
 
   const handleTestimonialsContinue = () => {
     simulateLoading(() => {
-      goToNextStep();
+      // Skip step 12 (loading screen) and go directly to step 13
+      setCurrentStep(13);
     }, 2000);
   };
 
