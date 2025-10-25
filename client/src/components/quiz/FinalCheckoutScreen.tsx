@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Clock, Frown, Smile, CheckCircle } from "lucide-react";
+import { Clock, Frown, Smile, CheckCircle, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import beforeImage from "@assets/image_1760984396828.png";
@@ -186,6 +186,13 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
               >
                 Comprar Agora
               </Button>
+
+              <div className="flex items-center justify-center gap-1.5 pt-1" data-testid="text-social-proof">
+                <Users className="w-3.5 h-3.5 text-muted-foreground" />
+                <p className="text-xs text-muted-foreground">
+                  1.347 pessoas já compraram!
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
