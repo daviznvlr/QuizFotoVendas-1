@@ -58,13 +58,10 @@ export function TestimonialsScreen({ onContinue, onBack }: TestimonialsScreenPro
         )}
 
         <div className="flex-1 flex flex-col items-center justify-center space-y-8">
-          <div className="text-center space-y-2">
+          <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground" data-testid="text-title">
               Depoimentos
             </h1>
-            <p className="text-muted-foreground" data-testid="text-subtitle">
-              Veja o que nossos alunos que aplicaram o plano estão dizendo
-            </p>
           </div>
 
           <div className="w-full space-y-4">
