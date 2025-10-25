@@ -197,10 +197,10 @@ export default function QuizFunnel() {
   ];
 
   const feelingOptions: QuestionOption[] = [
-    { id: "realizada", label: "😍 Realizada(o) por transformar algo que gosto em renda", icon: "Heart" },
-    { id: "orgulhosa", label: "😊 Orgulhosa(o) de mostrar que consigo empreender", icon: "Smile" },
+    { id: "realizada", label: "😍 Realizada por transformar algo que gosto em renda", icon: "Heart" },
+    { id: "orgulhosa", label: "😊 Orgulhosa de mostrar que consigo empreender", icon: "Smile" },
     { id: "feliz", label: "🤑 Feliz por ter um dinheiro a mais no fim do ano", icon: "DollarSign" },
-    { id: "motivada", label: "😉 Motivada(o) a continuar vendendo o ano todo", icon: "Zap" },
+    { id: "motivada", label: "😉 Motivada a continuar vendendo o ano todo", icon: "Zap" },
   ];
 
   const revenueOptions: QuestionOption[] = [
@@ -227,7 +227,7 @@ export default function QuizFunnel() {
     { id: "vida-melhor", label: "😔 Não conseguir dar uma vida melhor para a minha família", icon: "Home" },
     { id: "escolher", label: "😞 Ter que escolher entre pagar contas ou realizar sonhos", icon: "Scale" },
     { id: "tempo-filhos", label: "😢 Não ter tempo para os filhos, pois tenho que trabalhar fora", icon: "Users" },
-    { id: "estressada", label: "😰 Viver estressada(o) sem segurança financeira", icon: "AlertTriangle" },
+    { id: "estressada", label: "😰 Viver estressada sem segurança financeira", icon: "AlertTriangle" },
   ];
 
   if (isLoading) {

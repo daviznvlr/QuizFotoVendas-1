@@ -80,7 +80,7 @@ export function QuestionScreen({
                 key={option.id}
                 onClick={() => onSelect(option.id)}
                 className={cn(
-                  "w-full p-6 rounded-lg border-2 transition-all text-left",
+                  "w-full p-4 rounded-lg border-2 transition-all text-left",
                   "hover-elevate active-elevate-2",
                   "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
                   selectedValue === option.id
@@ -89,7 +89,7 @@ export function QuestionScreen({
                 )}
                 data-testid={`option-${option.id}`}
               >
-                <span className="text-base font-medium">{option.label}</span>
+                <span className="text-sm font-medium">{option.label}</span>
               </button>
             ))}
           </div>
