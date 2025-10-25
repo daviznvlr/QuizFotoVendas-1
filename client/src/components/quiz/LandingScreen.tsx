@@ -13,7 +13,7 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
         <Logo />
         
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+          <h2 className="text-2xl md:text-3xl font-bold leading-tight">
             <span className="text-destructive">Fature de R$ 2.000 a R$8.000</span>{" "}
             <span className="text-foreground">neste fim de ano vendendo</span>{" "}
             <span className="text-foreground">Panetones Gourmet, seguindo um método simples e comprovado!</span>
