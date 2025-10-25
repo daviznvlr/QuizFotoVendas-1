@@ -24,7 +24,7 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
           <img 
             src={panetoneImage} 
             alt="O melhor Panetone Gourmet"
-            className="w-full max-w-sm rounded-lg"
+            className="w-full max-w-xs rounded-lg"
           />
         </div>
 
