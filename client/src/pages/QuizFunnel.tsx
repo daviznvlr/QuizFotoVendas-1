@@ -135,7 +135,7 @@ export default function QuizFunnel() {
     
     // Calculate profile directly
     try {
-      const response = await fetch(`/api/calculate-profile/${sessionId}`);
+      const response = await fetch(`/api/profile/${sessionId}`);
       const profile: ProfileResult = await response.json();
       setCalculatedProfile(profile);
       
