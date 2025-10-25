@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Clock, Frown, Smile } from "lucide-react";
+import { Clock, Frown, Smile, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import beforeImage from "@assets/image_1760984396828.png";
@@ -139,6 +139,28 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
               </Button>
             </CardContent>
           </Card>
+        </div>
+
+        <div className="w-full max-w-md mx-auto px-6 pb-8">
+          <div className="border-t pt-4">
+            <p className="text-center text-xs text-muted-foreground mb-3" data-testid="text-payment-info">
+              Pague seu investimento com apenas 01 panetone
+            </p>
+
+            <div className="bg-accent/30 rounded-lg p-4 space-y-2">
+              <div className="flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                </div>
+              </div>
+              <h3 className="text-center font-bold text-sm text-foreground" data-testid="text-guarantee-title">
+                Seu risco é zero!
+              </h3>
+              <p className="text-center text-xs text-foreground" data-testid="text-guarantee-desc">
+                Se dentro de 7 dias você não estiver satisfeito com o material oferecido, garantimos 100% do seu dinheiro de volta.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
