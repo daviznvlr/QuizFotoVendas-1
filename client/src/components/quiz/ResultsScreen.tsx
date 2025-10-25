@@ -66,23 +66,23 @@ export function ResultsScreen({ profile, onContinue, onBack, progress }: Results
             Parabéns!!! Você tem o perfil ideal para lucrar com panetones gourmet
           </h2>
 
-          <div className="space-y-8 flex-1">
-            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-xl p-8 shadow-lg">
-              <div className="flex flex-col items-center justify-center space-y-6 text-white">
-                <div className="bg-white/10 rounded-full p-4 backdrop-blur-sm">
-                  {getPotentialIcon(profile.potential)}
+          <div className="space-y-6 flex-1">
+            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-xl p-6 shadow-lg">
+              <div className="flex flex-col items-center justify-center space-y-4 text-white">
+                <div className="bg-white/10 rounded-full p-3 backdrop-blur-sm">
+                  <Award className="w-8 h-8 text-success" />
                 </div>
                 
-                <div className="text-center space-y-4 w-full">
-                  <p className="text-base font-medium opacity-90">Seu potencial de vendas</p>
-                  <div className="bg-white rounded-xl px-8 py-4 shadow-md">
-                    <p className={`text-5xl font-bold ${getPotentialColor(profile.potential)}`} data-testid="text-potential-label">
+                <div className="text-center space-y-3 w-full">
+                  <p className="text-sm font-medium opacity-90">Seu potencial de vendas</p>
+                  <div className="bg-white rounded-lg px-6 py-3 shadow-md">
+                    <p className={`text-4xl font-bold ${getPotentialColor(profile.potential)}`} data-testid="text-potential-label">
                       {profile.potential}
                     </p>
                   </div>
                   <div className="pt-2 border-t border-white/20">
-                    <p className="text-xs uppercase tracking-wider opacity-75 mb-2">Rank Score</p>
-                    <p className="text-3xl font-bold" data-testid="text-rank-score">
+                    <p className="text-xs uppercase tracking-wider opacity-75 mb-1">Rank Score</p>
+                    <p className="text-2xl font-bold" data-testid="text-rank-score">
                       {profile.score}/100
                     </p>
                   </div>
