@@ -120,15 +120,15 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                 <div className="flex items-baseline justify-center gap-0.5">
                   <span className="text-base font-semibold text-foreground">R$</span>
                   <span className="text-4xl font-bold text-foreground" data-testid="text-price-new">
-                    39
+                    27
                   </span>
-                  <span className="text-xl font-bold text-foreground">,90</span>
+                  <span className="text-xl font-bold text-foreground">,00</span>
                 </div>
               </div>
 
               <div className="bg-yellow-400 rounded-lg py-1.5 px-3 text-center">
                 <p className="text-xs font-semibold text-foreground" data-testid="text-savings">
-                  Economize R$ 57,10
+                  Economize R$ 70,00
                 </p>
               </div>
 
