@@ -97,9 +97,8 @@ export function PlanReadyScreen({ onContinue }: PlanReadyScreenProps) {
               <div key={index} className="flex gap-3" data-testid={`benefit-${index}`}>
                 <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm text-foreground">
-                    <span className="font-semibold">{benefit.title}</span>{" "}
-                    {benefit.description}
+                  <p className="text-sm text-foreground font-semibold">
+                    {benefit.title} {benefit.description}
                   </p>
                 </div>
               </div>
