@@ -52,7 +52,7 @@ export function PlanReadyScreen({ onContinue }: PlanReadyScreenProps) {
     <div className="min-h-screen bg-background flex flex-col">
       <div className="w-full max-w-2xl mx-auto px-6 py-8 flex-1 flex flex-col">
         <div className="flex-1 flex flex-col items-center justify-center space-y-8">
-          <div className="w-full max-w-md relative">
+          <div className="w-full max-w-xs relative">
             <div className="overflow-hidden rounded-lg" ref={emblaRef}>
               <div className="flex">
                 {panettoneImages.map((image, index) => (
