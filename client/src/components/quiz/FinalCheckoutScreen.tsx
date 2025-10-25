@@ -94,21 +94,21 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
             </Card>
           </div>
 
-          <div className="text-center space-y-2">
-            <h2 className="text-2xl font-bold text-foreground" data-testid="text-offer-title">
-              Oferta exclusiva válida só hoje
-            </h2>
-          </div>
-
           <Card className="w-full max-w-md bg-card border-2" data-testid="card-offer">
-            <CardContent className="p-6">
+            <CardContent className="p-6 space-y-6">
+              <div className="text-center">
+                <h2 className="text-xl font-bold text-foreground mb-4" data-testid="text-offer-title">
+                  Oferta exclusiva válida só hoje
+                </h2>
+              </div>
+
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
-                    <Clock className="w-6 h-6" />
+                  <div className="w-10 h-10 rounded-full border-2 border-foreground flex items-center justify-center">
+                    <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground line-through" data-testid="text-price-old">
+                    <p className="text-xs text-muted-foreground line-through" data-testid="text-price-old">
                       De R$97,00
                     </p>
                   </div>
@@ -120,39 +120,37 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                   </p>
                 </div>
               </div>
+
+              <Button
+                onClick={onCheckout}
+                size="lg"
+                className="w-full bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
+                data-testid="button-checkout"
+              >
+                COMPRAR AGORA
+              </Button>
+
+              <div className="border-t pt-4">
+                <p className="text-center text-xs text-muted-foreground mb-3" data-testid="text-payment-info">
+                  Pague seu investimento com apenas 01 panetone
+                </p>
+
+                <div className="bg-accent/30 rounded-lg p-4 space-y-2">
+                  <div className="flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 text-green-600" />
+                    </div>
+                  </div>
+                  <h3 className="text-center font-bold text-sm text-foreground" data-testid="text-guarantee-title">
+                    Seu risco é zero!
+                  </h3>
+                  <p className="text-center text-xs text-foreground" data-testid="text-guarantee-desc">
+                    Se dentro de 7 dias você não estiver satisfeito com o material oferecido, garantimos 100% do seu dinheiro de volta.
+                  </p>
+                </div>
+              </div>
             </CardContent>
           </Card>
-
-          <Button
-            onClick={onCheckout}
-            size="lg"
-            className="w-full max-w-md bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
-            data-testid="button-checkout"
-          >
-            COMPRAR AGORA
-          </Button>
-
-          <div className="w-full max-w-sm space-y-3 mt-4">
-            <p className="text-center text-xs text-muted-foreground" data-testid="text-payment-info">
-              Pague seu investimento com apenas 01 panetone
-            </p>
-
-            <Card className="bg-card">
-              <CardContent className="p-4 space-y-2">
-                <div className="flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full border-2 border-foreground flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                  </div>
-                </div>
-                <h3 className="text-center font-bold text-sm text-foreground" data-testid="text-guarantee-title">
-                  Seu risco é zero!
-                </h3>
-                <p className="text-center text-xs text-foreground" data-testid="text-guarantee-desc">
-                  Se dentro de 7 dias você não estiver satisfeito com o material oferecido, garantimos 100% do seu dinheiro de volta.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </div>
