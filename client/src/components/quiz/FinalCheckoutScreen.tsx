@@ -180,7 +180,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
               </div>
 
               <Button
-                onClick={onCheckout}
+                onClick={() => window.open('https://pay.kiwify.com.br/gDLcgEB', '_blank')}
                 className="w-full bg-yellow-500 hover:bg-yellow-600 text-foreground font-bold text-sm py-5 rounded-lg"
                 data-testid="button-checkout"
               >
