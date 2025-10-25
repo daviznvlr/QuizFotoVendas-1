@@ -102,29 +102,79 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
             </Card>
           </div>
 
-          <Card className="w-full max-w-md bg-card border-2" data-testid="card-offer">
-            <CardContent className="p-6 space-y-6">
-              <div className="text-center">
-                <h2 className="text-xl font-bold text-foreground mb-4" data-testid="text-offer-title">
-                  Oferta exclusiva válida só hoje ({getCurrentDate()})
+          <Card className="w-full max-w-md bg-card border-[3px] border-yellow-600/80 rounded-2xl" data-testid="card-offer">
+            <CardContent className="p-8 space-y-5">
+              <div className="text-center space-y-2">
+                <h2 className="text-2xl font-bold text-foreground" data-testid="text-offer-title">
+                  Receitas Completas
                 </h2>
+                <p className="text-sm text-muted-foreground" data-testid="text-offer-subtitle">
+                  A experiência completa para faturar alto com panetones gourmet.
+                </p>
               </div>
 
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full border-2 border-foreground flex items-center justify-center">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground line-through" data-testid="text-price-old">
-                      De R$97,00
-                    </p>
-                  </div>
+              <div className="text-center space-y-1">
+                <p className="text-sm text-muted-foreground line-through" data-testid="text-price-old">
+                  de R$ 97,00
+                </p>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-xl font-semibold text-foreground">R$</span>
+                  <span className="text-6xl font-bold text-foreground" data-testid="text-price-new">
+                    39
+                  </span>
+                  <span className="text-2xl font-bold text-foreground">,90</span>
                 </div>
-                <div className="bg-yellow-300 px-6 py-3 rounded-md">
-                  <p className="text-xs text-foreground">Por apenas</p>
-                  <p className="text-3xl font-bold text-green-600" data-testid="text-price-new">
-                    R$ 39,90
+              </div>
+
+              <div className="bg-yellow-400 rounded-lg py-2 px-4 text-center">
+                <p className="text-sm font-semibold text-foreground" data-testid="text-savings">
+                  Economize R$ 57,10
+                </p>
+              </div>
+
+              <div className="space-y-3 py-2">
+                <div className="flex items-start gap-3" data-testid="item-receitas-basicas">
+                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                  </div>
+                  <p className="text-sm text-foreground">
+                    Todas as Receitas Básicas
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3" data-testid="item-bonus-recheios">
+                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                  </div>
+                  <p className="text-sm text-foreground">
+                    Bônus: Recheios Gourmet Exclusivos
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3" data-testid="item-bonus-coberturas">
+                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                  </div>
+                  <p className="text-sm text-foreground">
+                    Bônus: Coberturas Irresistíveis
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3" data-testid="item-bonus-precificacao">
+                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                  </div>
+                  <p className="text-sm text-foreground">
+                    Bônus: Guia de Precificação
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3" data-testid="item-bonus-marketing">
+                  <div className="w-5 h-5 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-yellow-600 fill-yellow-600" />
+                  </div>
+                  <p className="text-sm text-foreground">
+                    Bônus: Estratégias de Marketing
                   </p>
                 </div>
               </div>
@@ -132,10 +182,10 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
               <Button
                 onClick={onCheckout}
                 size="lg"
-                className="w-full bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-foreground font-bold text-base py-6 rounded-lg"
                 data-testid="button-checkout"
               >
-                COMPRAR AGORA
+                Comprar Agora
               </Button>
             </CardContent>
           </Card>
