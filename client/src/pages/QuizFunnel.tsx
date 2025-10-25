@@ -4,7 +4,6 @@ import { LandingScreen } from "@/components/quiz/LandingScreen";
 import { QuestionScreen, QuestionOption } from "@/components/quiz/QuestionScreen";
 import { InfoScreen } from "@/components/quiz/InfoScreen";
 import { ResultsScreen } from "@/components/quiz/ResultsScreen";
-import { AnalyzingScreen } from "@/components/quiz/AnalyzingScreen";
 import { FinalOfferScreen } from "@/components/quiz/FinalOfferScreen";
 import { LoadingScreen } from "@/components/quiz/LoadingScreen";
 import { TestimonialsScreen } from "@/components/quiz/TestimonialsScreen";
@@ -134,16 +133,21 @@ export default function QuizFunnel() {
     // Save the experience to backend
     await updateQuizState({ experience });
     
-    // Navigate to analyzing screen (step 6)
-    goToNextStep();
-  };
-
-  const handleProfileCalculated = (profile: ProfileResult) => {
-    // Store the calculated profile
-    setCalculatedProfile(profile);
-    
-    // Navigate to results screen (step 7)
-    goToNextStep();
+    // Calculate profile directly
+    try {
+      const response = await fetch(`/api/calculate-profile/${sessionId}`);
+      const profile: ProfileResult = await response.json();
+      setCalculatedProfile(profile);
+      
+      // Skip analyzing screen and go directly to results (step 7)
+      setCurrentStep(7);
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: "Não foi possível calcular seu perfil. Tente novamente.",
+      });
+    }
   };
 
   const handlePotentialSelect = async (potential: string) => {
@@ -290,14 +294,6 @@ export default function QuizFunnel() {
           onSelect={handleExperienceSelect}
           onBack={goToPrevStep}
           selectedValue={quizState.experience}
-        />
-      )}
-
-      {currentStep === 6 && (
-        <AnalyzingScreen
-          sessionId={sessionId}
-          onComplete={handleProfileCalculated}
-          onBack={goToPrevStep}
         />
       )}
 
