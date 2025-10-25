@@ -98,7 +98,7 @@ export function PlanReadyScreen({ onContinue }: PlanReadyScreenProps) {
                 <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-foreground font-semibold">
-                    {benefit.title} {benefit.description}
+                    {benefit.title}
                   </p>
                 </div>
               </div>
