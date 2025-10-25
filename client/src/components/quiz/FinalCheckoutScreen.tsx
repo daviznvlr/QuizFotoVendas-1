@@ -27,6 +27,14 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
     const secs = seconds % 60;
     return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   };
+
+  const getCurrentDate = () => {
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const year = today.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div className="bg-yellow-300 text-center py-3 px-6">
@@ -98,7 +106,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
             <CardContent className="p-6 space-y-6">
               <div className="text-center">
                 <h2 className="text-xl font-bold text-foreground mb-4" data-testid="text-offer-title">
-                  Oferta exclusiva válida só hoje
+                  Oferta exclusiva válida só hoje ({getCurrentDate()})
                 </h2>
               </div>
 
