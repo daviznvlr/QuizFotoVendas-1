@@ -84,10 +84,10 @@ export function PlanReadyScreen({ onContinue }: PlanReadyScreenProps) {
           </div>
 
           <div className="text-center space-y-2">
-            <h1 className="text-3xl font-bold text-foreground" data-testid="text-title">
+            <h1 className="text-2xl font-bold text-foreground" data-testid="text-title">
               Seu plano está pronto!!!
             </h1>
-            <p className="text-lg text-destructive font-semibold" data-testid="text-subtitle">
+            <p className="text-base text-destructive font-semibold" data-testid="text-subtitle">
               Veja o que você irá aprender e ter acesso:
             </p>
           </div>
