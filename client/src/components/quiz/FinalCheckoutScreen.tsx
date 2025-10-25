@@ -40,7 +40,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
       <div className="bg-yellow-300 text-center py-3 px-6">
         <p className="text-sm font-semibold text-foreground flex items-center justify-center gap-2" data-testid="text-timer">
           <Clock className="w-4 h-4" />
-          {formatTime(timeLeft)} Oferta por tempo limitado!
+          Oferta exclusiva e válida só hoje ({getCurrentDate()})
         </p>
       </div>
 
