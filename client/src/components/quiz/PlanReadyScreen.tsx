@@ -18,19 +18,19 @@ interface Benefit {
 
 const benefits: Benefit[] = [
   {
-    title: "35 Receitas exclusivas de Panetones Gourmet:",
+    title: "35 Receitas exclusivas de Panetones Gourmet",
     description: "aprenda a fazer panetones deliciosos que vão encantar seus clientes e aumentar suas vendas"
   },
   {
-    title: "Precificação para o lucro:",
+    title: "Precificação para o lucro",
     description: "aprenda a dar o preço correto em cada tipo de panetone e aumente a sua margem de lucro"
   },
   {
-    title: "Estratégias de divulgação simples e eficazes:",
+    title: "Estratégias de divulgação simples e eficazes",
     description: "como promover seus panetones no whatsapp, facebook e instagram de forma prática e atrair clientes prontos para comprar"
   },
   {
-    title: "Baixo investimento inicial:",
+    title: "Baixo investimento inicial",
     description: "como começar o seu negócio de panetones gourmet sem gastar muito, utilizando ingredientes acessíveis e técnicas que garantem alto lucro"
   }
 ];
