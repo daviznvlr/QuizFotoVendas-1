@@ -51,9 +51,14 @@ export function ResultsScreen({ profile, onContinue, progress }: ResultsScreenPr
             </div>
           )}
 
-          <h2 className="text-xl md:text-2xl font-semibold text-center mb-8 leading-tight">
+          <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 leading-tight">
             Parabéns!!! Você tem o perfil ideal para lucrar com panetones gourmet
           </h2>
+
+          <p className="text-base text-center text-muted-foreground mb-8 leading-relaxed" data-testid="text-transition">
+            Eu sabia! Quem respondeu como você tem o perfil perfeito para começar.
+            E pra te ajudar a não perder tempo, preparei um plano passo a passo com tudo o que precisa pra começar a lucrar ainda neste Natal.
+          </p>
 
           <div className="space-y-6 flex-1">
             <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-xl p-6 shadow-lg">
