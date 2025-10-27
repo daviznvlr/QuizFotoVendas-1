@@ -13,11 +13,12 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
         <Logo />
         
         <div className="text-center space-y-4">
-          <h2 className="text-xl md:text-2xl font-bold leading-tight">
-            <span className="text-destructive">Fature de R$ 2.000 a R$8.000</span>{" "}
-            <span className="text-foreground">neste fim de ano vendendo</span>{" "}
-            <span className="text-foreground">Panetones Gourmet, seguindo um método simples e comprovado!</span>
-          </h2>
+          <h1 className="text-xl md:text-2xl font-bold leading-tight text-foreground">
+            Transforme sua paixão por confeitaria em uma renda doce e real neste Natal
+          </h1>
+          <p className="text-base text-muted-foreground">
+            Com receitas simples e estratégias práticas, você vai criar panetones que encantam e vendem.
+          </p>
         </div>
 
         <div className="flex justify-center">
@@ -29,14 +30,6 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
         </div>
 
         <div className="text-center space-y-6">
-          <p className="text-base text-foreground">
-            Quem sabe vender do jeito certo,{" "}
-            <span className="font-semibold">fatura alto.</span>{" "}
-            <span className="text-destructive font-semibold">
-              Descubra se você tem o perfil.
-            </span>
-          </p>
-
           <Button
             onClick={onStart}
             size="lg"

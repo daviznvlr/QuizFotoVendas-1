@@ -54,17 +54,8 @@ export default function QuizFunnel() {
     goToNextStep();
   };
 
-  const handleAgeSelect = (age: string) => {
-    updateQuizState({ age });
-    goToNextStep();
-  };
-
-  const handleInfoContinue = () => {
-    goToNextStep();
-  };
-
-  const handleFeelingSelect = (feeling: string) => {
-    updateQuizState({ feeling });
+  const handleExperienceSelect = (experience: string) => {
+    updateQuizState({ experience });
     goToNextStep();
   };
 
@@ -73,8 +64,8 @@ export default function QuizFunnel() {
     goToNextStep();
   };
 
-  const handleExperienceSelect = (experience: string) => {
-    updateQuizState({ experience });
+  const handleObstacleSelect = (obstacle: string) => {
+    updateQuizState({ obstacle });
     
     // Calculate profile based on responses
     const profile: ProfileResult = {
@@ -88,26 +79,14 @@ export default function QuizFunnel() {
     };
     setCalculatedProfile(profile);
     
-    // Go directly to results (step 7)
-    setCurrentStep(7);
+    simulateLoading(() => {
+      goToNextStep();
+    }, 1500);
   };
 
   const handlePotentialSelect = (potential: string) => {
     updateQuizState({ potential });
     goToNextStep();
-  };
-
-  const handleObstacleSelect = (obstacle: string) => {
-    updateQuizState({ obstacle });
-    goToNextStep();
-  };
-
-  const handleFinancialConcernSelect = (financialConcern: string) => {
-    updateQuizState({ financialConcern });
-    
-    simulateLoading(() => {
-      goToNextStep();
-    }, 1500);
   };
 
   const handleFinalAnswer = (finalAnswer: string) => {
@@ -117,8 +96,8 @@ export default function QuizFunnel() {
 
   const handleTestimonialsContinue = () => {
     simulateLoading(() => {
-      // Skip step 12 (loading screen) and go directly to step 13
-      setCurrentStep(13);
+      // Skip step 7 (loading screen) and go directly to step 8
+      setCurrentStep(8);
     }, 2000);
   };
 
@@ -130,18 +109,10 @@ export default function QuizFunnel() {
     console.log("Quiz completo - Checkout:", quizState);
   };
 
-  const ageOptions: QuestionOption[] = [
-    { id: "18-29", label: "18-29" },
-    { id: "30-40", label: "30-40" },
-    { id: "41-50", label: "41-50" },
-    { id: "+50", label: "+50" },
-  ];
-
-  const feelingOptions: QuestionOption[] = [
-    { id: "realizada", label: "😍 Realizada por transformar algo que gosto em renda", icon: "Heart" },
-    { id: "orgulhosa", label: "😊 Orgulhosa de mostrar que consigo empreender", icon: "Smile" },
-    { id: "feliz", label: "🤑 Feliz por ter um dinheiro a mais no fim do ano", icon: "DollarSign" },
-    { id: "motivada", label: "😉 Motivada a continuar vendendo o ano todo", icon: "Zap" },
+  const experienceOptions: QuestionOption[] = [
+    { id: "nenhum", label: "🙂 Nenhum, mas adoro aprender coisas novas.", icon: "BookOpen" },
+    { id: "vez-quando", label: "😐 Já faço doces de vez em quando", icon: "Coffee" },
+    { id: "experiencia", label: "😍 Tenho experiência e quero dominar os panetones gourmet", icon: "Award" },
   ];
 
   const revenueOptions: QuestionOption[] = [
@@ -151,24 +122,11 @@ export default function QuizFunnel() {
     { id: "nao-pensei", label: "🤔 Ainda não pensei nisso, mas adoraria ter um lucro extra", icon: "HelpCircle" },
   ];
 
-  const experienceOptions: QuestionOption[] = [
-    { id: "nenhum", label: "🙂 Nenhum, mas adoro aprender coisas novas.", icon: "BookOpen" },
-    { id: "vez-quando", label: "😐 Já faço doces de vez em quando", icon: "Coffee" },
-    { id: "experiencia", label: "😍 Tenho experiência e quero dominar os panetones gourmet", icon: "Award" },
-  ];
-
   const obstacleOptions: QuestionOption[] = [
     { id: "tempo", label: "⏰ Falta de tempo", icon: "Clock" },
     { id: "medo", label: "😰 Medo de não dar certo", icon: "AlertCircle" },
     { id: "dinheiro", label: "💸 Falta de dinheiro para investir", icon: "Wallet" },
     { id: "nao-sei", label: "🤷 Não sei por onde começar", icon: "HelpCircle" },
-  ];
-
-  const financialOptions: QuestionOption[] = [
-    { id: "vida-melhor", label: "😔 Não conseguir dar uma vida melhor para a minha família", icon: "Home" },
-    { id: "escolher", label: "😞 Ter que escolher entre pagar contas ou realizar sonhos", icon: "Scale" },
-    { id: "tempo-filhos", label: "😢 Não ter tempo para os filhos, pois tenho que trabalhar fora", icon: "Users" },
-    { id: "estressada", label: "😰 Viver estressada sem segurança financeira", icon: "AlertTriangle" },
   ];
 
   if (isLoading) {
@@ -181,27 +139,14 @@ export default function QuizFunnel() {
       
       {currentStep === 1 && (
         <QuestionScreen
-          question="Qual a sua idade?"
-          options={ageOptions}
-          onSelect={handleAgeSelect}
-          selectedValue={quizState.age}
+          question="Qual é o seu nível de experiência na cozinha?"
+          options={experienceOptions}
+          onSelect={handleExperienceSelect}
+          selectedValue={quizState.experience}
         />
       )}
 
       {currentStep === 2 && (
-        <InfoScreen onContinue={handleInfoContinue} />
-      )}
-
-      {currentStep === 3 && (
-        <QuestionScreen
-          question="Como se sentiria se conseguisse fazer e vender panetones neste fim de ano?"
-          options={feelingOptions}
-          onSelect={handleFeelingSelect}
-          selectedValue={quizState.feeling}
-        />
-      )}
-
-      {currentStep === 4 && (
         <QuestionScreen
           question="Quanto você gostaria de faturar com panetones neste Natal?"
           options={revenueOptions}
@@ -210,23 +155,7 @@ export default function QuizFunnel() {
         />
       )}
 
-      {currentStep === 5 && (
-        <QuestionScreen
-          question="Qual é o seu nível de experiência na cozinha?"
-          options={experienceOptions}
-          onSelect={handleExperienceSelect}
-          selectedValue={quizState.experience}
-        />
-      )}
-
-      {currentStep === 7 && calculatedProfile && (
-        <ResultsScreen
-          profile={calculatedProfile}
-          onContinue={handlePotentialSelect}
-        />
-      )}
-
-      {currentStep === 8 && (
+      {currentStep === 3 && (
         <QuestionScreen
           question="O que mais te impede de começar algo novo para ganhar uma renda extra?"
           options={obstacleOptions}
@@ -235,42 +164,40 @@ export default function QuizFunnel() {
         />
       )}
 
-      {currentStep === 9 && (
-        <QuestionScreen
-          question="O que mais te preocupa na sua situação financeira atual?"
-          options={financialOptions}
-          onSelect={handleFinancialConcernSelect}
-          selectedValue={quizState.financialConcern}
+      {currentStep === 4 && calculatedProfile && (
+        <ResultsScreen
+          profile={calculatedProfile}
+          onContinue={handlePotentialSelect}
         />
       )}
 
-      {currentStep === 10 && (
+      {currentStep === 5 && (
         <FinalOfferScreen
           onAccept={() => handleFinalAnswer("sim")}
           onLearnMore={() => handleFinalAnswer("saber-mais")}
         />
       )}
 
-      {currentStep === 11 && (
+      {currentStep === 6 && (
         <TestimonialsScreen
           onContinue={handleTestimonialsContinue}
         />
       )}
 
-      {currentStep === 12 && (
+      {currentStep === 7 && (
         <LoadingScreen 
           progress={loadingProgress} 
           message="Saindo um plano do forno para você"
         />
       )}
 
-      {currentStep === 13 && (
+      {currentStep === 8 && (
         <PlanReadyScreen
           onContinue={handlePlanReadyContinue}
         />
       )}
 
-      {currentStep === 14 && (
+      {currentStep === 9 && (
         <FinalCheckoutScreen
           onCheckout={handleCheckout}
         />
