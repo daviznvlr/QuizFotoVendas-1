@@ -14,10 +14,10 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
         
         <div className="text-center space-y-4">
           <h1 className="text-xl md:text-2xl font-bold leading-tight text-foreground">
-            Transforme sua paixão por confeitaria em uma renda doce e real neste Natal
+            Transforme sua paixão por confeitaria em uma renda doce e real neste Natal 🍫
           </h1>
-          <p className="text-base text-muted-foreground">
-            Com receitas simples e estratégias práticas, você vai criar panetones que encantam e vendem.
+          <p className="text-base text-foreground">
+            Aprenda as 35 receitas de panetones gourmet que mais vendem, mesmo que nunca tenha feito um antes.
           </p>
         </div>
 
@@ -33,10 +33,11 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
           <Button
             onClick={onStart}
             size="lg"
-            className="w-full h-14 text-lg font-semibold bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
+            className="w-full h-14 text-lg font-semibold animate-pulse-cta shadow-lg hover:shadow-xl transition-shadow"
+            style={{ backgroundColor: '#FFC107', color: '#000' }}
             data-testid="button-start-quiz"
           >
-            QUERO DESCOBRIR
+            Quero Lucrar com Panetones
           </Button>
         </div>
       </div>
