@@ -181,7 +181,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
 
               <Button
                 onClick={() => window.open('https://pay.kiwify.com.br/gDLcgEB', '_blank')}
-                className="w-full font-bold text-base py-6 rounded-lg transition-all hover:scale-105"
+                className="w-full font-bold text-sm py-5 rounded-lg transition-all hover:scale-105 whitespace-normal leading-tight"
                 style={{ backgroundColor: '#2E7D32', color: '#FFFFFF' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#388E3C'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2E7D32'}
