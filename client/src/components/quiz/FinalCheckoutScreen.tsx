@@ -180,7 +180,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
               </div>
 
               <Button
-                onClick={() => window.open('https://pay.kiwify.com.br/gDLcgEB', '_blank')}
+                onClick={() => window.open('https://ivory-horse-718246.hostingersite.com/', '_blank')}
                 className="w-full font-bold text-sm py-5 rounded-lg transition-all hover:scale-105 whitespace-normal leading-tight"
                 style={{ backgroundColor: '#2E7D32', color: '#FFFFFF' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#388E3C'}
