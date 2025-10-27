@@ -106,10 +106,10 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
             <CardContent className="p-5 space-y-3">
               <div className="text-center space-y-1">
                 <h2 className="text-xl font-bold text-foreground" data-testid="text-offer-title">
-                  Receitas Completas
+                  Método Panetone Gourmet Lucrativo 🍫
                 </h2>
-                <p className="text-xs text-muted-foreground" data-testid="text-offer-subtitle">
-                  A experiência completa para faturar alto com panetones gourmet.
+                <p className="text-sm text-foreground leading-relaxed" data-testid="text-offer-subtitle">
+                  Você vai ter em mãos o mesmo método que transformou o Natal de centenas de mulheres — receitas irresistíveis, precificação certeira e estratégias simples pra vender sem depender de sorte.
                 </p>
               </div>
 
