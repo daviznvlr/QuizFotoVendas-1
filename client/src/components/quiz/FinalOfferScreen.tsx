@@ -17,13 +17,19 @@ export function FinalOfferScreen({ onAccept, onLearnMore }: FinalOfferScreenProp
           </div>
 
           <div className="space-y-6 flex-1">
-            <h2 className="text-xl md:text-2xl font-semibold leading-tight">
-              Se eu te entregar um{" "}
-              <span className="text-destructive">plano passo a passo</span>, com tudo pronto,
-              desde receitas fáceis até estratégias de divulgação eficazes para{" "}
-              <span className="text-destructive">faturar R$6000</span> vendendo Panetones Gourmet...{" "}
-              <span className="text-destructive font-bold">Você aceitaria?</span>
-            </h2>
+            <div className="space-y-3">
+              <p className="text-base text-center text-muted-foreground" data-testid="text-profile-result">
+                Você tem o perfil ideal para começar a lucrar com panetones. Veja agora como fazer isso passo a passo 👇
+              </p>
+              
+              <h2 className="text-xl md:text-2xl font-semibold leading-tight">
+                Se eu te entregar um{" "}
+                <span className="text-destructive">plano passo a passo</span>, com tudo pronto,
+                desde receitas fáceis até estratégias de divulgação eficazes para{" "}
+                <span className="text-destructive">faturar R$6000</span> vendendo Panetones Gourmet...{" "}
+                <span className="text-destructive font-bold">Você aceitaria?</span>
+              </h2>
+            </div>
 
             <div className="space-y-4 pt-4">
               <button

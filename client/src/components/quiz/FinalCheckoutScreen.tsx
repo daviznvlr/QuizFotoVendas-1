@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Clock, Frown, Smile, CheckCircle, Users } from "lucide-react";
+import { Clock, Frown, Smile, CheckCircle, Users, ShieldCheck, Zap, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import beforeImage from "@assets/image_1760984396828.png";
@@ -181,10 +181,13 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
 
               <Button
                 onClick={() => window.open('https://pay.kiwify.com.br/gDLcgEB', '_blank')}
-                className="w-full bg-yellow-500 hover:bg-yellow-600 text-foreground font-bold text-sm py-5 rounded-lg"
+                className="w-full font-bold text-base py-6 rounded-lg transition-all hover:scale-105"
+                style={{ backgroundColor: '#2E7D32', color: '#FFFFFF' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#388E3C'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2E7D32'}
                 data-testid="button-checkout"
               >
-                Comprar Agora
+                Quero Começar a Lucrar com Panetones 🎯
               </Button>
 
               <div className="flex items-center justify-center gap-1.5 pt-1" data-testid="text-social-proof">
@@ -192,6 +195,63 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                 <p className="text-xs text-muted-foreground">
                   1.347 pessoas já compraram!
                 </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="w-full max-w-md border-2" style={{ borderColor: '#E53935', backgroundColor: '#FFEBEE' }}>
+            <CardContent className="p-4 space-y-2">
+              <h3 className="text-center font-bold text-base" style={{ color: '#E53935' }} data-testid="text-urgency-title">
+                Atenção! Oferta especial de Natal disponível por tempo limitado 🎅
+              </h3>
+              <p className="text-center text-sm text-foreground" data-testid="text-urgency-desc">
+                Aproveite enquanto o valor promocional de <span className="font-bold">R$27</span> está ativo — depois o preço volta para R$97.
+              </p>
+              <div className="text-center pt-2">
+                <div className="inline-block bg-white rounded-lg px-4 py-2 shadow-sm">
+                  <p className="text-2xl font-bold" style={{ color: '#E53935' }} data-testid="text-countdown">
+                    {formatTime(timeLeft)}
+                  </p>
+                  <p className="text-xs text-muted-foreground">tempo restante</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="w-full max-w-md bg-card" data-testid="card-authority">
+            <CardContent className="p-5 space-y-4">
+              <h3 className="text-center font-bold text-lg text-foreground">
+                Por que este método funciona?
+              </h3>
+              <p className="text-center text-sm text-foreground leading-relaxed">
+                Desenvolvido com base nas receitas e estratégias de confeiteiras reais que lucraram no último Natal.
+                Mais de 1.200 alunas já transformaram seu amor por doces em fonte de renda.
+              </p>
+              <div className="grid grid-cols-3 gap-3 pt-2">
+                <div className="text-center space-y-1">
+                  <div className="flex justify-center">
+                    <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                      <ShieldCheck className="w-5 h-5 text-green-600" />
+                    </div>
+                  </div>
+                  <p className="text-xs font-semibold text-foreground">Compra 100% Segura</p>
+                </div>
+                <div className="text-center space-y-1">
+                  <div className="flex justify-center">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-blue-600" />
+                    </div>
+                  </div>
+                  <p className="text-xs font-semibold text-foreground">Acesso Imediato</p>
+                </div>
+                <div className="text-center space-y-1">
+                  <div className="flex justify-center">
+                    <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                      <Award className="w-5 h-5 text-yellow-600" />
+                    </div>
+                  </div>
+                  <p className="text-xs font-semibold text-foreground">Satisfação Garantida</p>
+                </div>
               </div>
             </CardContent>
           </Card>

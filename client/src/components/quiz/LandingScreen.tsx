@@ -29,6 +29,31 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
           />
         </div>
 
+        <div className="space-y-4 text-left">
+          <div className="space-y-2">
+            <div className="flex items-start gap-2">
+              <span className="text-lg">✅</span>
+              <p className="text-sm text-foreground">35 receitas exclusivas e testadas</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-lg">💰</span>
+              <p className="text-sm text-foreground">Guia de precificação para garantir lucro</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-lg">📲</span>
+              <p className="text-sm text-foreground">Estratégias práticas para divulgar e vender nas redes sociais</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-lg">🎁</span>
+              <p className="text-sm text-foreground">Bônus: ideias de embalagens e sabores natalinos que encantam</p>
+            </div>
+          </div>
+          
+          <p className="text-center text-base font-semibold text-foreground italic pt-2" data-testid="text-emotional-close">
+            Chegou sua chance de fazer panetones lindos, deliciosos e lucrativos — direto da sua cozinha!
+          </p>
+        </div>
+
         <div className="text-center space-y-6">
           <Button
             onClick={onStart}

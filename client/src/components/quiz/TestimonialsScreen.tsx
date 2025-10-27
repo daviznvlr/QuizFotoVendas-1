@@ -22,25 +22,35 @@ const testimonials: TestimonialData[] = [
   {
     name: "Roberta",
     location: "São Paulo - SP",
-    text: "Com as estratégias de precificação e divulgação, vendi mais de 100 panetones e faturei mais de R$ 900,00 em 2 semanas",
+    text: "Com as estratégias de precificação e divulgação, **vendi** mais de 100 panetones e **faturei** mais de R$ 900,00 em 2 semanas",
     avatar: "R",
     image: robertaImg
   },
   {
     name: "Cláudia",
     location: "Vitória - ES",
-    text: "As receitas são fáceis e de custo baixo. As dicas de vendas me ajudaram muito. Já tenho clientes fiéis para o próximo ano.",
+    text: "As **receitas incríveis** são fáceis e de custo baixo. As dicas de vendas me ajudaram muito. Já tenho clientes fiéis para o próximo ano.",
     avatar: "C",
     image: claudiaImg
   },
   {
     name: "Helena",
     location: "Uberlândia, MG",
-    text: "Nunca tinha vendido nada antes. Com esse método vendi 87 panetones e faturei R$4.300,00",
+    text: "Nunca tinha vendido nada antes. Com esse método **vendi** 87 panetones e **lucrei** R$4.300,00",
     avatar: "H",
     image: helenaImg
   }
 ];
+
+const renderTextWithBold = (text: string) => {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+};
 
 export function TestimonialsScreen({ onContinue }: TestimonialsScreenProps) {
   return (
@@ -48,14 +58,19 @@ export function TestimonialsScreen({ onContinue }: TestimonialsScreenProps) {
       <div className="w-full max-w-2xl mx-auto px-6 py-8 flex-1 flex flex-col">
         <div className="flex-1 flex flex-col items-center justify-center space-y-8">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-foreground" data-testid="text-title">
-              Depoimentos
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground" data-testid="text-title">
+              Veja o que outras alunas estão dizendo 👇
             </h1>
           </div>
 
           <div className="w-full space-y-4">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-card border-2 shadow-md hover-elevate" data-testid={`card-testimonial-${index}`}>
+              <Card 
+                key={index} 
+                className="shadow-md hover-elevate" 
+                style={{ backgroundColor: '#FFF8E1', borderRadius: '12px' }}
+                data-testid={`card-testimonial-${index}`}
+              >
                 <CardContent className="p-5 space-y-3">
                   <div className="flex items-center gap-3">
                     <Avatar className="h-14 w-14 border-2 border-primary/20">
@@ -77,14 +92,14 @@ export function TestimonialsScreen({ onContinue }: TestimonialsScreenProps) {
                     </div>
                   </div>
                   
-                  <div className="flex gap-0.5 mb-2" data-testid={`stars-${index}`}>
+                  <div className="flex gap-0.5 mb-2 justify-center" data-testid={`stars-${index}`}>
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
                   
-                  <p className="text-sm text-foreground/90 leading-relaxed italic" data-testid={`text-testimonial-${index}`}>
-                    "{testimonial.text}"
+                  <p className="text-sm text-foreground/90 leading-relaxed text-center" data-testid={`text-testimonial-${index}`}>
+                    "{renderTextWithBold(testimonial.text)}"
                   </p>
                 </CardContent>
               </Card>

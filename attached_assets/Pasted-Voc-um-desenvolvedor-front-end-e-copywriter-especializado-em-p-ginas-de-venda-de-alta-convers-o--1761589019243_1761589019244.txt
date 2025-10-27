@@ -1,0 +1,97 @@
+Você é um desenvolvedor front-end e copywriter especializado em páginas de venda de alta conversão.  
+Sua tarefa é **melhorar a página existente do produto digital “Panetone Gourmet Lucrativo”**, sem alterar o layout geral, apenas otimizando design, textos e CTAs para aumentar conversão.  
+
+## CONTEXTO DO PRODUTO
+Ebook digital com 35 receitas de panetones gourmet + guia de precificação + estratégias simples de venda online.  
+Público-alvo: mulheres entre 25 e 45 anos que amam confeitaria, querem começar um negócio em casa e lucrar no Natal.  
+Objetivo da página: gerar vendas imediatas via tráfego do Meta Ads.  
+
+---
+
+## 🎯 O QUE MELHORAR
+
+### 1. HEADLINE E SUBTÍTULO (SEÇÃO PRINCIPAL)
+Substitua o título e subtítulo atuais por uma versão emocional e vendedora:
+- **Título:** “Transforme sua paixão por confeitaria em uma renda doce e real neste Natal 🎄”
+- **Subtítulo:** “Aprenda as 35 receitas de panetones gourmet que mais vendem — mesmo que nunca tenha feito um antes.”
+Mantenha o botão “Quero Lucrar com Panetones” logo abaixo, com fundo dourado (#FFC107), texto em preto e leve sombra de destaque.
+
+---
+
+### 2. SEÇÃO DE BENEFÍCIOS / OFERTA
+Reescreva o texto para uma linguagem simples e emocional, em formato de lista:
+- ✅ 35 receitas exclusivas e testadas
+- 💰 Guia de precificação para garantir lucro
+- 📲 Estratégias práticas para divulgar e vender nas redes sociais
+- 🎁 Bônus: ideias de embalagens e sabores natalinos que encantam
+
+Finalize com uma frase emocional:
+> “Chegou sua chance de fazer panetones lindos, deliciosos e lucrativos — direto da sua cozinha!”
+
+---
+
+### 3. DEPOIMENTOS
+Melhore o visual dos depoimentos:
+- Fundo claro (#FFF8E1), bordas arredondadas (12px) e leve sombra.
+- Texto centralizado e com palavras-chave em negrito (“vendi”, “lucrei”, “receitas incríveis”).
+- Adicione título acima:  
+  “Veja o que outras alunas estão dizendo 👇”
+
+---
+
+### 4. URGÊNCIA E ESCASSEZ
+Adicione uma seção logo antes do botão final:
+- **Título:** “Atenção! Oferta especial de Natal disponível por tempo limitado 🎅”
+- **Texto:** “Aproveite enquanto o valor promocional de R$47 está ativo — depois o preço volta para R$97.”
+- Inclua um contador regressivo (HTML simples ou script básico) e destaque o texto em vermelho suave (#E53935).
+
+---
+
+### 5. AUTORIDADE E CONFIANÇA
+Adicione uma mini-seção abaixo da oferta:
+**Título:** “Por que este método funciona?”
+**Texto:**  
+“Desenvolvido com base nas receitas e estratégias de confeiteiras reais que lucraram no último Natal.  
+Mais de 1.200 alunas já transformaram seu amor por doces em fonte de renda.”  
+Adicione ícones ou selos:
+- Compra 100% Segura
+- Acesso Imediato
+- Satisfação Garantida
+
+---
+
+### 6. BOTÃO DE COMPRA (CTA)
+- Texto: “Quero Começar a Lucrar com Panetones 🎯”
+- Cor: verde #2E7D32  
+- Efeito hover: fundo clareando (#388E3C) com leve animação (transform: scale(1.05))
+- Fixe o botão no rodapé em telas mobile (position: fixed; bottom: 20px; width: 90%).
+
+---
+
+### 7. QUIZ (CASO ESTEJA NA PÁGINA)
+Simplifique para no máximo 4 perguntas:
+1. Nível de experiência na confeitaria  
+2. Quanto quer faturar neste Natal  
+3. O que mais impede de começar  
+4. Resultado do perfil  
+Após o resultado, mostre:
+> “Você tem o perfil ideal para começar a lucrar com panetones. Veja agora como fazer isso passo a passo 👇”
+
+---
+
+## 🎨 DESIGN E USABILIDADE
+- Paleta: amarelo dourado (#FFC107), branco (#FFFFFF), verde escuro (#2E7D32) e toques de vermelho (#E53935) para urgência.
+- Tipografia: Poppins ou Inter (títulos grandes, texto limpo e legível).
+- Layout responsivo, mobile-first, com espaçamento entre seções e foco no botão principal.
+- Evite excesso de texto e blocos longos. Mantenha a leitura leve e fluida.
+
+---
+
+## 🧠 OBJETIVO FINAL
+Manter a mesma estrutura e tema visual da página atual, mas:
+- Tornar o texto mais emocional, envolvente e voltado para resultados.  
+- Aumentar o senso de confiança e urgência.  
+- Reforçar o benefício principal: *“lucrar neste Natal com panetones gourmet”*.  
+- Melhorar CTAs e microcopy para gerar mais cliques e conversões.
+
+Entregue o novo código HTML e CSS completo já ajustado, mantendo as imagens originais e substituindo apenas os textos e estilos conforme descrito acima.
