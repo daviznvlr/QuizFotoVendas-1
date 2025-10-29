@@ -1,0 +1,159 @@
+PROMPT DE OTIMIZAÇÃO (BASEADO NO SEU QUIZ ATUAL)
+
+🎯 Objetivo: otimizar o funil de quiz “Panettone Gourmet” já existente, mantendo design e estrutura visual, mas melhorando a copy, CTAs e persuasão para aumentar o número de cliques no checkout e conversões em vendas.
+
+🧩 Instruções gerais para a IA
+
+Não altere o layout nem o CSS existente.
+
+Mantenha as cores (amarelo, verde, branco) e estilo atual.
+
+Mantenha as seções na mesma ordem.
+
+Mantenha o mesmo número de perguntas.
+
+Substitua apenas os textos (headline, subtítulo, botões e mensagens de transição) pelos novos abaixo.
+
+Não mexa nas imagens, ícones ou estrutura de depoimentos.
+
+Não altere a funcionalidade do quiz ou redirecionamentos existentes.
+
+🚀 ETAPA 1 — PÁGINA INICIAL (INTRO)
+🔁 Substituir texto atual por:
+
+Headline:
+
+🎄 Descubra se você tem o perfil certo para faturar com Panetones Gourmet neste Natal!
+
+Subheadline:
+
+Responda ao quiz e descubra seu potencial de lucro com um método simples e testado que já transformou o Natal de mais de 1.200 mulheres — mesmo sem experiência!
+
+Texto de reforço:
+
+⏰ Leva menos de 1 minuto e pode mudar o seu Natal!
+
+CTA:
+
+🍫 Começar o teste agora →
+
+Prova social:
+
+👩‍🍳 Mais de 1.200 mulheres já descobriram seu perfil e começaram a lucrar de casa!
+
+🍪 ETAPA 2 — PERGUNTAS DO QUIZ
+🔁 Manter perguntas e opções, apenas adicionar “tom de incentivo” sutil abaixo de cada pergunta.
+
+Exemplo (após a pergunta):
+
+<small style="color:#777;">Sua resposta ajuda a personalizar o plano ideal de lucros para você 🎯</small>
+
+🪞 ETAPA 3 — RESULTADO
+🔁 Substituir texto do resultado por:
+
+Título:
+
+🎉 Parabéns! Seu perfil é ideal para lucrar com Panetones Gourmet neste Natal!
+
+Texto principal:
+
+Suas respostas mostram que você tem o perfil certo para começar a lucrar com panetones gourmet — e o melhor: ainda dá tempo de aproveitar a alta demanda de fim de ano.
+Eu preparei um plano passo a passo com receitas, estratégias e precificação para você começar do zero e lucrar direto da sua cozinha!
+
+Indicador:
+
+Potencial de Vendas: ALTO (85/100)
+
+CTA:
+
+💛 Gerar meu plano personalizado →
+
+📜 ETAPA 4 — PLANO PERSONALIZADO
+🔁 Atualizar texto principal:
+
+Título:
+
+🧾 Seu plano está pronto!
+
+Subtexto:
+
+Veja o que você vai receber no seu plano completo de Panetones Gourmet:
+
+Lista revisada:
+
+✅ 35 receitas exclusivas de panetones gourmet
+
+✅ Guia de precificação para lucro imediato
+
+✅ Estratégias simples de divulgação e vendas
+
+✅ Baixo investimento inicial (menos que o preço de um panetone!)
+
+CTA:
+
+💚 Ver plano completo →
+
+🌟 ETAPA 5 — PROVA SOCIAL
+🔁 Apenas adicione uma mini-headline antes dos depoimentos:
+
+🔥 Essas mulheres começaram do zero e estão lucrando com Panetones Gourmet:
+
+(Mantenha os depoimentos existentes, sem mudanças.)
+
+🎯 ETAPA 6 — OFERTA / CHECKOUT
+🔁 Atualizar apenas textos da oferta:
+
+Título da oferta:
+
+🎁 Método Panetone Gourmet Lucrativo
+
+Subheadline:
+
+O mesmo método que transformou o Natal de centenas de mulheres em uma nova fonte de renda — receitas irresistíveis, precificação certeira e estratégias de vendas simples.
+
+Preço:
+
+De R$97 por R$27,00
+💸 Economize R$70 e garanta acesso imediato.
+
+CTA principal (verde):
+
+💚 Quero começar a lucrar com panetones agora →
+
+Texto abaixo do botão:
+
+👩‍🍳 Mais de 1.300 alunas já garantiram acesso!
+
+Bloco de urgência (vermelho):
+
+⏰ Oferta especial de Natal válida somente hoje!
+Depois o valor volta para R$97.
+
+Garantia:
+
+✅ 7 dias de garantia total. Se não gostar, devolvemos 100% do valor.
+
+🧠 ETAPA FINAL — OTIMIZAÇÕES TÉCNICAS
+
+Adicionar pixel Meta (opcional) com rastreamento nos eventos:
+
+“Começar o teste” → Lead
+
+“Gerar plano” → AddToCart
+
+“Ver plano completo” → ViewContent
+
+“Comprar” → Purchase
+
+Adicionar um contador de tempo visível de 8 minutos na oferta.
+(Exemplo: “Tempo restante: 07:59”)
+
+Ativar botão fixo (sticky CTA) no checkout com texto:
+
+💚 “Garantir acesso por R$27 agora”
+
+💬 Instrução final para a IA do Replit
+
+Aplique somente as alterações de texto e comportamento listadas acima, sem alterar layout, cores, número de perguntas ou redirecionamentos.
+Mantenha todas as seções originais do quiz, apenas substituindo as cópias atuais pelos novos textos revisados.
+O estilo visual e estrutura devem permanecer idênticos ao site atual do quiz Panetone Gourmet.

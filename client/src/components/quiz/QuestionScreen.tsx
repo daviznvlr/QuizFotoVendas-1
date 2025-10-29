@@ -58,9 +58,13 @@ export function QuestionScreen({
             </div>
           )}
 
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8 leading-tight">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 leading-tight">
             {question}
           </h2>
+
+          <p className="text-xs text-center mb-8" style={{ color: '#777' }}>
+            Sua resposta ajuda a personalizar o plano ideal de lucros para você 🎯
+          </p>
 
           <div className="space-y-4 flex-1">
             {options.map((option) => (

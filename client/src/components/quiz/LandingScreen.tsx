@@ -14,21 +14,16 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
         </div>
         
         <div className="text-center space-y-3">
-          <p className="text-[17px]" style={{ color: '#444', marginBottom: '5px' }}>
-            💬 Se você ama confeitar e quer transformar isso em renda extra...
-          </p>
-          
-          <h1 className="text-[27px] font-extrabold leading-[1.3]" style={{ color: '#1a1a1a', marginTop: '5px' }}>
-            🎄 Descubra se você também consegue faturar com panetones gourmet neste Natal!
+          <h1 className="text-[27px] font-extrabold leading-[1.3]" style={{ color: '#1a1a1a' }}>
+            🎄 Descubra se você tem o perfil certo para faturar com Panetones Gourmet neste Natal!
           </h1>
           
           <p className="text-base md:text-lg" style={{ color: '#555', marginTop: '10px' }}>
-            Responda ao quiz e descubra seu potencial de lucro com um método simples e testado 
-            que já ajudou centenas de mulheres a começarem do zero e lucrar direto da cozinha!
+            Responda ao quiz e descubra seu potencial de lucro com um método simples e testado que já transformou o Natal de mais de 1.200 mulheres — mesmo sem experiência!
           </p>
           
           <p className="text-base font-semibold" style={{ color: '#e67e22', marginTop: '8px' }}>
-            🎁 Leva menos de 1 minuto!
+            ⏰ Leva menos de 1 minuto e pode mudar o seu Natal!
           </p>
         </div>
 
@@ -47,12 +42,12 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
             }}
             data-testid="button-start-quiz"
           >
-            Começar o teste →
+            🍫 Começar o teste agora →
           </Button>
         </div>
 
         <p className="text-sm text-center" style={{ color: '#666', marginTop: '18px' }}>
-          💬 Mais de <strong>1.200 mulheres</strong> já descobriram seu perfil e começaram a lucrar neste Natal!
+          👩‍🍳 Mais de <strong>1.200 mulheres</strong> já descobriram seu perfil e começaram a lucrar de casa!
         </p>
       </div>
     </div>

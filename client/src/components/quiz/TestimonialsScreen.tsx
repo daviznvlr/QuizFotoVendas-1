@@ -57,7 +57,10 @@ export function TestimonialsScreen({ onContinue }: TestimonialsScreenProps) {
     <div className="min-h-screen bg-background flex flex-col" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="w-full max-w-2xl mx-auto px-6 py-8 flex-1 flex flex-col">
         <div className="flex-1 flex flex-col items-center justify-center space-y-8">
-          <div className="text-center">
+          <div className="text-center space-y-2">
+            <h2 className="text-xl font-bold" style={{ color: '#e67e22' }}>
+              🔥 Essas mulheres começaram do zero e estão lucrando com Panetones Gourmet:
+            </h2>
             <h1 className="text-2xl md:text-3xl font-bold text-foreground" data-testid="text-title">
               Veja o que outras alunas estão dizendo 👇
             </h1>
@@ -112,7 +115,7 @@ export function TestimonialsScreen({ onContinue }: TestimonialsScreenProps) {
             className="w-full max-w-md bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-continue"
           >
-            CONTINUAR
+            Quero ter resultados como elas →
           </Button>
         </div>
       </div>

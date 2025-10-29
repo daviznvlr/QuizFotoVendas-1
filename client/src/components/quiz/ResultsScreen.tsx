@@ -52,12 +52,12 @@ export function ResultsScreen({ profile, onContinue, progress }: ResultsScreenPr
           )}
 
           <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 leading-tight">
-            Parabéns!!! Você tem o perfil ideal para lucrar com panetones gourmet
+            🎉 Parabéns! Seu perfil é ideal para lucrar com Panetones Gourmet neste Natal!
           </h2>
 
           <p className="text-base text-center text-muted-foreground mb-8 leading-relaxed" data-testid="text-transition">
-            Eu sabia! Quem respondeu como você tem o perfil perfeito para começar.
-            E pra te ajudar a não perder tempo, preparei um plano passo a passo com tudo o que precisa pra começar a lucrar ainda neste Natal.
+            Suas respostas mostram que você tem o perfil certo para começar a lucrar com panetones gourmet — e o melhor: ainda dá tempo de aproveitar a alta demanda de fim de ano.
+            Eu preparei um plano passo a passo com receitas, estratégias e precificação para você começar do zero e lucrar direto da sua cozinha!
           </p>
 
           <div className="space-y-6 flex-1">
@@ -68,14 +68,13 @@ export function ResultsScreen({ profile, onContinue, progress }: ResultsScreenPr
                 </div>
                 
                 <div className="text-center space-y-3 w-full">
-                  <p className="text-sm font-medium opacity-90">Seu potencial de vendas</p>
+                  <p className="text-sm font-medium opacity-90">Potencial de Vendas</p>
                   <div className="bg-white rounded-lg px-6 py-3 shadow-md">
                     <p className={`text-4xl font-bold ${getPotentialColor(profile.potential)}`} data-testid="text-potential-label">
-                      {profile.potential}
+                      {profile.potential.toUpperCase()}
                     </p>
                   </div>
                   <div className="pt-2 border-t border-white/20">
-                    <p className="text-xs uppercase tracking-wider opacity-75 mb-1">Rank Score</p>
                     <p className="text-2xl font-bold" data-testid="text-rank-score">
                       {profile.score}/100
                     </p>
@@ -103,7 +102,7 @@ export function ResultsScreen({ profile, onContinue, progress }: ResultsScreenPr
             className="w-full h-14 text-lg font-semibold mt-8 bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-continue"
           >
-            Continuar
+            💛 Gerar meu plano personalizado →
           </Button>
         </div>
       </div>

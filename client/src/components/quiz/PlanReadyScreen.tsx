@@ -18,20 +18,20 @@ interface Benefit {
 
 const benefits: Benefit[] = [
   {
-    title: "35 Receitas exclusivas de Panetones Gourmet",
-    description: "aprenda a fazer panetones deliciosos que vão encantar seus clientes e aumentar suas vendas"
+    title: "35 receitas exclusivas de panetones gourmet",
+    description: ""
   },
   {
-    title: "Precificação para o lucro",
-    description: "aprenda a dar o preço correto em cada tipo de panetone e aumente a sua margem de lucro"
+    title: "Guia de precificação para lucro imediato",
+    description: ""
   },
   {
-    title: "Estratégias de divulgação simples e eficazes",
-    description: "como promover seus panetones no whatsapp, facebook e instagram de forma prática e atrair clientes prontos para comprar"
+    title: "Estratégias simples de divulgação e vendas",
+    description: ""
   },
   {
-    title: "Baixo investimento inicial",
-    description: "como começar o seu negócio de panetones gourmet sem gastar muito, utilizando ingredientes acessíveis e técnicas que garantem alto lucro"
+    title: "Baixo investimento inicial (menos que o preço de um panetone!)",
+    description: ""
   }
 ];
 
@@ -84,11 +84,16 @@ export function PlanReadyScreen({ onContinue }: PlanReadyScreenProps) {
           </div>
 
           <div className="text-center space-y-2">
+            <div className="inline-block bg-accent/50 px-4 py-1 rounded-full mb-2">
+              <p className="text-xs font-semibold text-foreground">
+                ✅ Plano gerado com base nas suas respostas
+              </p>
+            </div>
             <h1 className="text-2xl font-bold text-foreground" data-testid="text-title">
-              Seu plano está pronto!!!
+              🧾 Seu plano está pronto!
             </h1>
-            <p className="text-base text-destructive font-semibold" data-testid="text-subtitle">
-              Veja o que você irá aprender e ter acesso:
+            <p className="text-base text-foreground font-semibold" data-testid="text-subtitle">
+              Veja o que você vai receber no seu plano completo de Panetones Gourmet:
             </p>
           </div>
 
@@ -111,7 +116,7 @@ export function PlanReadyScreen({ onContinue }: PlanReadyScreenProps) {
             className="w-full max-w-md bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-continue"
           >
-            CONTINUAR
+            💚 Ver plano completo →
           </Button>
         </div>
       </div>
