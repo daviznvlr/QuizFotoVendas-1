@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz – Panetone Gourmet Lucrativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#1f2937; --muted:#6b7280; --primary:#fbbf24; --primary-600:#f59e0b; --success:#10b981; --success-700:#059669; --danger:#ef4444; --brand:#111827; --card:#fff7ed; --green:#16a34a; --yellow:#fbbf24;
+      --radius:18px; --shadow:0 10px 25px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:880px;margin:0 auto;padding:24px}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin:16px 0}
+    h1,h2,h3{margin:0 0 14px}
+    h1{font-size:clamp(26px,4vw,38px);line-height:1.15}
+    h2{font-size:clamp(22px,3.2vw,28px)}
+    p{color:var(--muted);font-size:18px;line-height:1.6;margin:10px 0}
+    .center{text-align:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff7ed;color:#92400e;font-weight:600;font-size:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px 18px;border:none;border-radius:14px;cursor:pointer;font-weight:800;font-size:18px;transition:transform .04s ease, box-shadow .2s ease;box-shadow:0 6px 0 rgba(0,0,0,.08)}
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:var(--primary);color:#111827}
+    .btn-primary:hover{background:var(--primary-600)}
+    .btn-success{background:var(--success);color:#fff}
+    .btn-success:hover{background:var(--success-700)}
+    .grid{display:grid;gap:14px}
+    .answers{display:grid;gap:14px;margin-top:18px}
+    .answer{padding:16px;border-radius:14px;border:2px solid #e5e7eb;background:#fff;cursor:pointer;font-weight:600;font-size:18px;text-align:left}
+    .answer:hover{border-color:#d1d5db}
+    .muted{color:var(--muted)}
+    .progress{height:8px;background:#f3f4f6;border-radius:999px;overflow:hidden}
+    .bar{height:100%;width:0;background:var(--green);transition:width .35s ease}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:#ecfdf5;color:#065f46;font-weight:700;font-size:14px}
+    .list{display:grid;gap:10px;margin:12px 0}
+    .list .item{display:flex;gap:10px;align-items:flex-start;background:#f8fafc;padding:12px;border-radius:12px}
+    .kpis{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    .kpi{background:linear-gradient(135deg,#1e3a8a,#1d4ed8);color:#fff;border-radius:16px;padding:18px;text-align:center}
+    .kpi .score{font-size:42px;font-weight:900}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+    .outline{background:#fff;border:2px dashed #e5e7eb}
+    .testimonials{display:grid;gap:16px}
+    .t{background:#fffbeb;border:1px solid #fde68a;border-radius:16px;padding:16px}
+    .t strong{display:block;margin-bottom:6px}
+    .price{font-size:48px;font-weight:900}
+    .strike{color:#9ca3af;text-decoration:line-through;margin-right:8px}
+    .timer{font-weight:800;font-size:22px}
+    .footer{opacity:.7;font-size:14px;margin-top:18px}
+    .sticky-cta{position:sticky;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e7eb;padding:12px}
+    .date{font-weight:800}
+    @media (max-width:640px){.kpis{grid-template-columns:1fr}}
+  </style>
+  <!-- Cole seu Pixel do Meta opcionalmente abaixo -->
+  <!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','SEU_PIXEL_ID'); fbq('track','PageView');</script> -->
+</head>
+<body>
+  <div class="wrap">
+    <!-- ETAPA 1: Intro -->
+    <section id="step-intro" class="card center">
+      <div class="badge">⏰ Leva menos de 1 minuto!</div>
+      <h1>🎄 Será que você tem o perfil para faturar alto com <strong>Panetones Gourmet</strong> neste Natal?</h1>
+      <p>Faça o teste e descubra como transformar seu talento na cozinha em uma renda deliciosa — mesmo começando do zero.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary" id="startBtn">🍰 Começar o teste agora →</button>
+      </div>
+      <p class="muted">👩‍🍳 Mais de <strong>1.200 mulheres</strong> já descobriram seu perfil e começaram a lucrar neste Natal!</p>
+    </section>
+
+    <!-- Barra de Progresso -->
+    <section id="progress" class="card" style="display:none">
+      <div class="progress"><div class="bar" id="bar"></div></div>
+      <p class="muted center" id="progressLabel">Pergunta 1 de 3</p>
+    </section>
+
+    <!-- ETAPA 2: Perguntas -->
+    <section id="quiz" class="card" style="display:none"></section>
+
+    <!-- ETAPA 3: Resultado -->
+    <section id="result" class="card" style="display:none">
+      <h2>🎉 Parabéns! Você tem o perfil ideal para lucrar com Panetones Gourmet!</h2>
+      <p>Pelas suas respostas, você tem o perfil perfeito para começar — e o melhor: ainda dá tempo de lucrar neste Natal! Eu preparei um plano passo a passo com tudo o que você precisa pra sair do zero e começar a vender panetones irresistíveis direto da sua cozinha.</p>
+      <div class="kpis">
+        <div class="kpi"><div>Seu potencial de vendas</div><div class="score" id="score">85/100</div></div>
+        <div class="kpi"><div>Objetivo de faturamento</div><div class="score" id="goal">R$2.000+</div></div>
+      </div>
+      <div class="list">
+        <div class="item">🍫 Você tem grande potencial para faturar com panetones gourmet.</div>
+        <div class="item">🧁 Com as receitas certas, pode alcançar seus objetivos financeiros.</div>
+        <div class="item">🎯 Seu perfil é ideal para começar neste mercado.</div>
+      </div>
+      <button class="btn btn-success" id="seePlan">💛 Gerar meu plano personalizado →</button>
+    </section>
+
+    <!-- ETAPA 4: Transição / Plano -->
+    <section id="plan" class="card" style="display:none">
+      <span class="pill">✅ Plano gerado com base nas suas respostas</span>
+      <h2>🧾 Seu plano está pronto!</h2>
+      <p>Veja o que você vai aprender e ter acesso no seu plano completo:</p>
+      <div class="list">
+        <div class="item">✅ 35 receitas exclusivas de Panetones Gourmet</div>
+        <div class="item">✅ Estratégias simples de precificação e lucro</div>
+        <div class="item">✅ Dicas de divulgação e vendas testadas por alunas reais</div>
+        <div class="item">✅ Baixo investimento inicial (menos que o preço de 1 panetone!)</div>
+      </div>
+      <div class="cta-row">
+        <button class="btn btn-success" id="gotoOffer">💚 Ver plano completo →</button>
+        <button class="btn outline" id="gotoProof">Quero ver resultados de alunas</button>
+      </div>
+    </section>
+
+    <!-- ETAPA 5: Prova Social -->
+    <section id="proof" class="card" style="display:none">
+      <h2 class="center">Veja o que outras alunas estão dizendo 👇</h2>
+      <div class="testimonials">
+        <div class="t"><strong>⭐⭐⭐⭐⭐ Roberta – São Paulo/SP</strong>“Com as estratégias de precificação e divulgação, vendi mais de 100 panetones e faturei R$ 900 em 2 semanas.”</div>
+        <div class="t"><strong>⭐⭐⭐⭐⭐ Cláudia – Vitória/ES</strong>“As receitas são incríveis e fáceis de fazer. Já tenho clientes fiéis e lucro garantido!”</div>
+        <div class="t"><strong>⭐⭐⭐⭐⭐ Helena – Uberlândia/MG</strong>“Nunca tinha vendido nada antes. Com esse método, faturei R$ 4.300 vendendo 87 panetones!”</div>
+      </div>
+      <div class="cta-row" style="margin-top:10px">
+        <button class="btn btn-success" id="toOffer2">Quero ter resultados como elas →</button>
+      </div>
+    </section>
+
+    <!-- ETAPA 6: Oferta / Checkout -->
+    <section id="offer" class="card" style="display:none">
+      <div class="badge">⏳ Oferta exclusiva e válida só hoje (<span id="today" class="date"></span>)</div>
+      <div class="grid" style="margin-top:10px">
+        <div class="card outline">
+          <h3>ANTES</h3>
+          <p class="muted">Você deixando passar mais uma oportunidade de renda extra…</p>
+        </div>
+        <div class="card" style="border:2px solid #bbf7d0">
+          <h3>DEPOIS</h3>
+          <p class="muted">Você preparada e faturando alto com panetones gourmet!</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h2>📕 Método <strong>Panetone Gourmet Lucrativo</strong></h2>
+        <p>O mesmo método que transformou o Natal de centenas de mulheres com receitas irresistíveis, precificação certeira e estratégias simples para vender sem depender de sorte.</p>
+        <p><span class="strike">de R$ 97,00</span> <span class="price">R$ 27,00</span></p>
+        <p class="muted"><strong>Economize R$ 70</strong> e garanta acesso imediato.</p>
+        <ul class="list">
+          <li class="item">✅ Todas as Receitas Básicas</li>
+          <li class="item">✅ Bônus: Recheios Gourmet Exclusivos</li>
+          <li class="item">✅ Bônus: Coberturas Irresistíveis</li>
+          <li class="item">✅ Bônus: Guia de Precificação</li>
+          <li class="item">✅ Bônus: Estratégias de Marketing</li>
+        </ul>
+        <a id="checkoutBtn" class="btn btn-success" href="#" target="_blank" rel="noopener">💚 Quero Começar a Lucrar com Panetones →</a>
+        <p class="muted">👩‍🍳 <span id="buyers">1.347</span> pessoas já compraram!</p>
+        <div class="card outline center" style="margin-top:12px">
+          <p>🧨 Oferta especial termina em <span id="timer" class="timer">08:00</span></p>
+        </div>
+        <div class="grid" style="margin-top:14px">
+          <div class="card outline">🛡️ Compra 100% segura</div>
+          <div class="card outline">⚡ Acesso imediato</div>
+          <div class="card outline">😊 Satisfação garantida</div>
+        </div>
+        <p class="muted">Você paga seu investimento com apenas <strong>1 panetone vendido</strong>.</p>
+        <div class="card outline center">✅ <strong>Seu risco é zero!</strong> 7 dias de garantia incondicional.</div>
+      </div>
+    </section>
+
+    <div class="sticky-cta" id="sticky" style="display:none">
+      <div class="wrap" style="padding:0">
+        <a class="btn btn-success" id="stickyCheckout" href="#" target="_blank" rel="noopener">💚 Garantir acesso por R$27 agora</a>
+      </div>
+    </div>
+
+    <p class="footer center">© <span id="year"></span> Panettone Gourmet – Todos os direitos reservados.</p>
+  </div>
+
+<script>
+  // ====== CONFIGURAÇÕES ======
+  const CHECKOUT_URL = 'https://seu-checkout-aqui.com'; // <-- COLE A URL DO SEU CHECKOUT
+  const INITIAL_BUYERS = 1347; // contador simples ilustrativo
+
+  // ====== Estados ======
+  const steps = ['intro','quiz','result','plan','proof','offer'];
+  const data = { answers: {}, score: 85, goal: 'R$2.000+' };
+
+  // ====== Elementos ======
+  const el = id => document.getElementById(id);
+  const quizEl = el('quiz');
+  const bar = el('bar');
+  const progress = document.getElementById('progress');
+
+  // ====== Pixel helpers (seguros) ======
+  function track(event, params={}){ if(window.fbq){ try{ fbq('track', event, params);}catch(e){} } }
+
+  // ====== Util ======
+  function show(id){ steps.forEach(s=>{ const sec=document.getElementById(s==='intro'? 'step-intro':s); if(sec) sec.style.display = ( (s==='intro'? 'step-intro':s)===id ? 'block':'none');}); }
+  function setProgress(i,total){ bar.style.width = Math.round((i/total)*100)+'%'; el('progressLabel').textContent = `Pergunta ${i} de ${total}`; }
+
+  // ====== Perguntas ======
+  const questions = [
+    {
+      key:'experiencia',
+      title:'Qual é o seu nível de experiência na cozinha?',
+      options:[
+        '👩\u200d🔰 Nenhum, mas adoro aprender coisas novas.',
+        '🍬 Já faço doces de vez em quando.',
+        '👩\u200d🍳 Tenho experiência e quero dominar os panetones gourmet.'
+      ]
+    },
+    {
+      key:'meta',
+      title:'Quanto você gostaria de faturar com panetones neste Natal?',
+      options:[
+        '💰 Até R$2.000,00','💵 Entre R$2.000 e R$5.000','💸 Mais de R$5.000','🧁 Ainda não pensei nisso, mas adoraria ter um lucro extra.'
+      ]
+    },
+    {
+      key:'bloqueio',
+      title:'O que mais te impede de começar algo novo para ganhar uma renda extra?',
+      options:[
+        '⏳ Falta de tempo','😟 Medo de não dar certo','💸 Falta de dinheiro para investir','🤔 Não sei por onde começar'
+      ]
+    }
+  ];
+
+  // ====== Render Quiz ======
+  let qIndex = 0;
+  function renderQuestion(){
+    const total = questions.length;
+    const q = questions[qIndex];
+    quizEl.innerHTML = `
+      <h2>${q.title}</h2>
+      <div class="answers">
+        ${q.options.map((op,i)=>`<button class="answer" data-i="${i}">${op}</button>`).join('')}
+      </div>`;
+    quizEl.querySelectorAll('.answer').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        data.answers[q.key] = btn.textContent.trim();
+        if(q.key==='meta'){ data.goal = btn.textContent.replace(/[^0-9R$.,+]/g,'') || 'R$2.000+'; }
+        qIndex++;
+        if(qIndex<total){ setProgress(qIndex+1,total); renderQuestion(); }
+        else { finishQuiz(); }
+      });
+    });
+  }
+
+  function finishQuiz(){
+    show('result');
+    track('ViewContent', {content_name:'Quiz Result'});
+    el('goal').textContent = data.goal || 'R$2.000+';
+    // score simples só para feedback
+    let score = 85;
+    if(data.answers.experiencia && data.answers.experiencia.includes('Nenhum')) score = 78;
+    if(data.answers.meta && data.answers.meta.includes('Mais de')) score = 90;
+    el('score').textContent = score + '/100';
+  }
+
+  // ====== Timer oferta ======
+  let timerInterval;
+  function startTimer(minutes=8){
+    let secs = minutes*60; clearInterval(timerInterval);
+    timerInterval = setInterval(()=>{
+      const m = String(Math.floor(secs/60)).padStart(2,'0');
+      const s = String(secs%60).padStart(2,'0');
+      el('timer').textContent = `${m}:${s}`;
+      if(--secs<0){ clearInterval(timerInterval); el('timer').textContent='00:00'; }
+    },1000);
+  }
+
+  // ====== Eventos UI ======
+  document.getElementById('startBtn').addEventListener('click',()=>{
+    show('quiz'); progress.style.display='block'; setProgress(1,questions.length); renderQuestion();
+    track('Lead', {source:'Start Quiz'});
+  });
+
+  document.getElementById('seePlan').addEventListener('click',()=>{
+    show('plan');
+    track('AddToCart', {step:'See Plan'});
+  });
+
+  document.getElementById('gotoOffer').addEventListener('click',()=>{ openOffer(); });
+  document.getElementById('gotoProof').addEventListener('click',()=>{ show('proof'); });
+  document.getElementById('toOffer2').addEventListener('click',()=>{ openOffer(); });
+
+  function openOffer(){
+    show('offer'); startTimer(8); el('sticky').style.display='block';
+    track('AddToCart', {step:'Offer View'});
+  }
+
+  // Checkout links
+  ['checkoutBtn','stickyCheckout'].forEach(id=>{
+    const a = el(id); a.href = CHECKOUT_URL; a.addEventListener('click', ()=> track('InitiateCheckout')); });
+
+  // Data e rodapé
+  const today = new Date();
+  el('today').textContent = today.toLocaleDateString('pt-BR');
+  el('year').textContent = today.getFullYear();
+
+  // contador fake de compradores (ilustrativo)
+  let buyers = INITIAL_BUYERS; el('buyers').textContent = buyers.toLocaleString('pt-BR');
+</script>
+</body>
+</html>
