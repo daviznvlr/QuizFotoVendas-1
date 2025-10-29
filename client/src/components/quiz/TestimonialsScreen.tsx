@@ -109,13 +109,17 @@ export function TestimonialsScreen({ onContinue }: TestimonialsScreenProps) {
             ))}
           </div>
 
+          <p className="text-center text-base font-semibold text-foreground">
+            Você pode ser a próxima história de sucesso 👇
+          </p>
+
           <Button
             onClick={onContinue}
             size="lg"
             className="w-full max-w-md bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
             data-testid="button-continue"
           >
-            Quero ter resultados como elas →
+            💚 Quero ter resultados como elas →
           </Button>
         </div>
       </div>

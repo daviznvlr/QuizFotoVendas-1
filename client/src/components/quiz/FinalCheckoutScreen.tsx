@@ -40,7 +40,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
       <div className="bg-yellow-300 text-center py-3 px-6">
         <p className="text-sm font-semibold text-foreground flex items-center justify-center gap-2" data-testid="text-timer">
           <Clock className="w-4 h-4" />
-          Oferta exclusiva e válida só hoje ({getCurrentDate()})
+          🎁 Seu pedido está quase finalizado!
         </p>
       </div>
 
@@ -109,7 +109,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                   🎁 Método Panetone Gourmet Lucrativo
                 </h2>
                 <p className="text-sm text-foreground leading-relaxed" data-testid="text-offer-subtitle">
-                  O mesmo método que transformou o Natal de centenas de mulheres em uma nova fonte de renda — receitas irresistíveis, precificação certeira e estratégias de vendas simples.
+                  Último passo: confirme seu acesso e garanta o valor promocional de R$27 ⏰
                 </p>
               </div>
 
@@ -138,25 +138,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                     <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
                   </div>
                   <p className="text-xs text-foreground">
-                    Todas as Receitas Básicas
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-2" data-testid="item-bonus-recheios">
-                  <div className="w-4 h-4 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
-                  </div>
-                  <p className="text-xs text-foreground">
-                    Bônus: Recheios Gourmet Exclusivos
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-2" data-testid="item-bonus-coberturas">
-                  <div className="w-4 h-4 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
-                  </div>
-                  <p className="text-xs text-foreground">
-                    Bônus: Coberturas Irresistíveis
+                    📘 Ebook com 35 receitas exclusivas de Panetones Gourmet
                   </p>
                 </div>
 
@@ -165,7 +147,7 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                     <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
                   </div>
                   <p className="text-xs text-foreground">
-                    Bônus: Guia de Precificação
+                    💸 Guia de precificação para lucrar de verdade
                   </p>
                 </div>
 
@@ -174,7 +156,16 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                     <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
                   </div>
                   <p className="text-xs text-foreground">
-                    Bônus: Estratégias de Marketing
+                    📣 Estratégias práticas de divulgação e vendas
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-2" data-testid="item-bonus-recheios">
+                  <div className="w-4 h-4 rounded-full border-2 border-yellow-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-3 h-3 text-yellow-600 fill-yellow-600" />
+                  </div>
+                  <p className="text-xs text-foreground">
+                    🎁 Bônus: "Recheios sem fogo" (somente para as primeiras compradoras)
                   </p>
                 </div>
               </div>
@@ -187,13 +178,15 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2E7D32'}
                 data-testid="button-checkout"
               >
-                💚 Quero começar a lucrar com panetones agora →
+                💚 SIM! Quero garantir meu acesso agora →
               </Button>
 
-              <div className="flex items-center justify-center gap-1.5 pt-1" data-testid="text-social-proof">
-                <Users className="w-3.5 h-3.5 text-muted-foreground" />
+              <div className="text-center pt-2 space-y-1" data-testid="text-social-proof">
                 <p className="text-xs text-muted-foreground">
-                  👩‍🍳 Mais de 1.300 alunas já garantiram acesso!
+                  💳 Pagamento 100% seguro via Kiwify — aceitamos Pix, cartão e boleto.
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  👩‍🍳 Mais de 1.300 alunas já adquiriram com segurança!
                 </p>
               </div>
             </CardContent>
@@ -202,10 +195,10 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
           <Card className="w-full max-w-md border-2" style={{ borderColor: '#E53935', backgroundColor: '#FFEBEE' }}>
             <CardContent className="p-4 space-y-2">
               <h3 className="text-center font-bold text-base" style={{ color: '#E53935' }} data-testid="text-urgency-title">
-                ⏰ Oferta especial de Natal válida somente hoje!
+                ⚠️ Oferta exclusiva!
               </h3>
               <p className="text-center text-sm text-foreground" data-testid="text-urgency-desc">
-                Depois o valor volta para R$97.
+                O desconto de R$97 por apenas R$27 expira em:
               </p>
               <div className="text-center pt-2">
                 <div className="inline-block bg-white rounded-lg px-4 py-2 shadow-sm">
@@ -270,10 +263,10 @@ export function FinalCheckoutScreen({ onCheckout }: FinalCheckoutScreenProps) {
                 </div>
               </div>
               <h3 className="text-center font-bold text-sm text-foreground" data-testid="text-guarantee-title">
-                ✅ Seu risco é zero!
+                ✅ Garantia incondicional de 7 dias
               </h3>
               <p className="text-center text-xs text-foreground" data-testid="text-guarantee-desc">
-                7 dias de garantia total. Se não gostar, devolvemos 100% do valor.
+                Se não amar o material, devolvemos 100% do seu dinheiro.
               </p>
             </div>
           </div>

@@ -1,0 +1,196 @@
+PROMPT DE OTIMIZAÇÃO (QUIZ + CHECKOUT) – PANETTONE GOURMET
+
+🎯 Objetivo: atualizar textos e microcopy para aumentar a conversão do funil de quiz e checkout do “Panetone Gourmet”.
+Não alterar estrutura, layout, CSS, ou pós-checkout. Apenas atualizar o conteúdo textual conforme as instruções abaixo.
+
+🧩 INSTRUÇÕES GERAIS
+
+Não alterar a estrutura visual (cores, botões, imagens, espaçamentos).
+
+Atualizar apenas textos e CTAs conforme descrito em cada seção.
+
+Não modificar o comportamento do timer, pixel ou redirecionamentos.
+
+Manter o pós-checkout inalterado.
+
+🎄 1️⃣ PÁGINA INICIAL (INTRO DO QUIZ)
+
+Substituir textos por:
+
+Headline:
+
+🎄 Descubra se você tem o perfil certo para faturar com Panetones Gourmet neste Natal!
+
+Subheadline:
+
+Responda ao quiz e descubra seu potencial de lucro com um método simples e testado que já transformou o Natal de mais de 1.200 mulheres — mesmo começando do zero!
+
+Reforço:
+
+⏰ Leva menos de 1 minuto e pode mudar o seu Natal!
+
+CTA (botão):
+
+🍫 Começar o teste agora →
+
+Abaixo do botão:
+
+👩‍🍳 Mais de 1.200 mulheres já descobriram seu perfil e começaram a lucrar de casa!
+
+🍪 2️⃣ PERGUNTAS DO QUIZ
+
+Manter todas as perguntas e opções.
+Adicionar logo abaixo de cada pergunta a linha auxiliar (em tom suave, cor cinza):
+
+<small>Sua resposta ajuda a personalizar o plano ideal de lucros para você 🎯</small>
+
+Após a última pergunta (“O que mais te impede...”), incluir uma tela intermediária curta:
+
+“Gerando seu perfil de lucro 🍫...”
+(Manter por 2 segundos antes de exibir o resultado.)
+
+🪞 3️⃣ RESULTADO DO QUIZ
+
+Substituir texto por:
+
+Título:
+
+🎉 Parabéns! Seu perfil é ideal para lucrar com Panetones Gourmet neste Natal!
+
+Descrição:
+
+Suas respostas mostram que você tem o perfil certo para começar a lucrar com panetones gourmet — e o melhor: ainda dá tempo de aproveitar a alta demanda do Natal!
+Eu preparei um plano passo a passo com receitas, precificação e estratégias para você começar do zero e lucrar direto da sua cozinha.
+
+Indicador:
+
+Potencial de Vendas: ALTO (85/100)
+
+Benefícios (manter formato atual):
+
+🍫 Você tem grande potencial para faturar com panetones gourmet.
+
+🧁 Com as receitas certas, você pode alcançar seus objetivos financeiros.
+
+🎯 Seu perfil é ideal para começar neste mercado.
+
+CTA:
+
+💚 Gerar meu plano personalizado →
+
+📜 4️⃣ TELA DE TRANSIÇÃO / PLANO PRONTO
+
+Substituir por:
+
+Headline:
+
+🧾 Seu plano está pronto!
+
+Subheadline:
+
+Veja o que você vai receber no seu plano completo de Panetones Gourmet:
+
+Lista:
+
+✅ 35 receitas exclusivas de panetones gourmet
+
+✅ Guia de precificação para lucro imediato
+
+✅ Estratégias simples de divulgação e vendas
+
+✅ Baixo investimento inicial (menos que o preço de um panetone!)
+
+Adicionar linha acima do botão:
+
+🔒 Plano exclusivo gerado com base nas suas respostas. Disponível por tempo limitado.
+
+CTA (botão verde):
+
+💚 Ver plano completo →
+
+🌟 5️⃣ PROVA SOCIAL
+
+Substituir título por:
+
+🔥 Essas mulheres começaram do zero e estão lucrando com Panetones Gourmet 👇
+
+Manter os depoimentos originais.
+
+Adicionar antes do botão:
+
+“Você pode ser a próxima história de sucesso 👇”
+
+CTA (botão verde):
+
+💚 Quero ter resultados como elas →
+
+💰 6️⃣ OFERTA / CHECKOUT
+
+Atualizar textos para os seguintes:
+
+Título principal:
+
+🎁 Seu pedido está quase finalizado!
+
+Subheadline:
+
+Último passo: confirme seu acesso e garanta o valor promocional de R$27 ⏰
+
+Lista de benefícios:
+
+📘 Ebook com 35 receitas exclusivas de Panetones Gourmet
+
+💸 Guia de precificação para lucrar de verdade
+
+📣 Estratégias práticas de divulgação e vendas
+
+🎁 Bônus: “Recheios sem fogo” (somente para as primeiras compradoras)
+
+Bloco de urgência (manter visual):
+
+⚠️ Oferta exclusiva! O desconto de R$97 por apenas R$27 expira em:
+
+(Manter contador regressivo ativo.)
+
+CTA principal (botão verde):
+
+💚 SIM! Quero garantir meu acesso agora →
+
+Abaixo do botão:
+
+💳 Pagamento 100% seguro via Kiwify — aceitamos Pix, cartão e boleto.
+👩‍🍳 Mais de 1.300 alunas já adquiriram com segurança!
+
+Garantia:
+
+✅ Garantia incondicional de 7 dias: se não amar o material, devolvemos 100% do seu dinheiro.
+
+⚙️ 7️⃣ AJUSTES TÉCNICOS (opcional)
+
+Inserir evento de pixel Meta:
+
+Lead → Clique no botão “Começar o teste”
+
+ViewContent → Tela de resultado
+
+AddToCart → Clique em “Ver plano completo”
+
+Purchase → Conclusão no checkout
+
+Ativar sticky CTA (botão fixo) no checkout com o texto:
+
+💚 “Garantir meu acesso por R$27 agora (oferta termina hoje!)”
+
+📈 EXPECTATIVA DE MELHORIA
+Etapa	Conversão atual	Meta após ajustes
+Cliques no quiz	3–4%	5–6%
+Conclusão do quiz	75–80%	85–90%
+Cliques no checkout	35–40%	55%+
+Compra final	3–5%	8–10% (com remarketing)
+🧾 Resumo final para a IA do Replit:
+
+Aplique somente as alterações textuais acima.
+Mantenha toda a estrutura do site (cores, blocos, layout e imagens).
+Não altere o pós-checkout.
+Mantenha o contador, pixel e integração da Kiwify funcionando normalmente.
+Atualize os textos, CTAs e microcopys conforme descrito

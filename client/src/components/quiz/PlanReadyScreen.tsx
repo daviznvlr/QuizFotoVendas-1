@@ -110,6 +110,10 @@ export function PlanReadyScreen({ onContinue }: PlanReadyScreenProps) {
             ))}
           </div>
 
+          <p className="text-xs text-center text-muted-foreground px-4">
+            🔒 Plano exclusivo gerado com base nas suas respostas. Disponível por tempo limitado.
+          </p>
+
           <Button
             onClick={onContinue}
             size="lg"
