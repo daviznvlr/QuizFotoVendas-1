@@ -1,0 +1,57 @@
+Substitua a primeira seção (hero section) da página atual por esta versão aprimorada. 
+Mantenha todo o estilo visual e identidade do site (mesmas cores, fontes e espaçamentos).
+
+NOVA SEÇÃO (HTML + estilos inline):
+------------------------------------------------------------
+
+<section class="hero">
+  <div class="container text-center">
+    <img src="logo.png" alt="Panettone Gourmet" class="logo" style="width: 120px; margin-bottom: 10px;">
+
+    <p style="font-size: 17px; color: #444; margin-bottom: 5px;">
+      💬 Se você ama confeitar e quer transformar isso em renda extra...
+    </p>
+
+    <h1 style="font-weight: 800; color: #1a1a1a; font-size: 27px; line-height: 1.3; margin-top: 5px;">
+      ✨ Será que você também consegue faturar com Panetones Gourmet neste Natal?
+    </h1>
+
+    <p style="font-size: 18px; color: #555; margin-top: 10px;">
+      Responda ao quiz e descubra seu potencial de lucro com um método simples e testado 
+      que já ajudou centenas de mulheres a começarem do zero e lucrar direto da cozinha!
+    </p>
+
+    <p style="font-size: 16px; font-weight: 600; color: #e67e22; margin-top: 8px;">
+      🎁 Leva menos de 1 minuto!
+    </p>
+
+    <button class="cta-button" style="
+      background-color: #f7c948;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    " 
+    onmouseover="this.style.transform='scale(1.03)'"
+    onmouseout="this.style.transform='scale(1)'">
+      Começar o teste →
+    </button>
+
+    <p style="font-size: 14px; color: #666; margin-top: 18px;">
+      💬 Mais de <b>1.200 mulheres</b> já descobriram seu perfil e começaram a lucrar neste Natal!
+    </p>
+  </div>
+</section>
+
+------------------------------------------------------------
+REQUISITOS:
+- O botão “Começar o teste →” deve rolar automaticamente até o início do quiz.
+- O restante da página deve permanecer inalterado.
+- Garantir responsividade perfeita para celulares.
+- Manter o estilo visual da identidade Panettone Gourmet.
