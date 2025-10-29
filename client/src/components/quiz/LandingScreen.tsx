@@ -19,7 +19,7 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
           </p>
           
           <h1 className="text-[27px] font-extrabold leading-[1.3]" style={{ color: '#1a1a1a', marginTop: '5px' }}>
-            ✨ Será que você também consegue faturar com Panetones Gourmet neste Natal?
+            🎄 Descubra se você também consegue faturar com panetones gourmet neste Natal!
           </h1>
           
           <p className="text-base md:text-lg" style={{ color: '#555', marginTop: '10px' }}>
