@@ -1,0 +1,49 @@
+Substitua a seção de resultado atual por esta nova versão otimizada. 
+Mantenha o mesmo estilo visual do site (cores, fontes, espaçamentos).
+
+------------------------------------------------------------
+<section class="resultado">
+  <div class="container text-center">
+    <h2 style="font-size: 26px; font-weight: 800; color: #1a1a1a;">
+      🎉 Parabéns! Seu perfil mostra que você tem alto potencial para lucrar com Panetones Gourmet neste Natal!
+    </h2>
+    <p style="margin-top: 10px; color: #444; font-size: 17px; line-height: 1.6;">
+      Você já tem tudo o que precisa pra começar — falta apenas o método certo. 
+      E é exatamente isso que o <b>Método Panetone Gourmet Lucrativo</b> entrega:
+      receitas testadas, guia de precificação e estratégias simples pra vender rápido.
+    </p>
+    <div style="margin: 20px auto;">
+      <p style="font-size: 17px; color: #e67e22;">
+        💡 Promoção exclusiva: de <s>R$97,00</s> por apenas <b>R$27,00</b> — só hoje!
+      </p>
+    </div>
+    <button style="
+      background-color: #f7c948;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    " 
+    onmouseover="this.style.transform='scale(1.03)'"
+    onmouseout="this.style.transform='scale(1)'"
+    onclick="window.location.href='https://pay.kiwify.com.br/gDLcgEB'">
+      Quero Começar Agora 🎄
+    </button>
+
+    <p style="font-size: 15px; color: #666; margin-top: 15px;">
+      ⚠️ Atenção: essa condição é válida apenas para novos alunos e expira hoje à meia-noite.
+    </p>
+  </div>
+</section>
+------------------------------------------------------------
+
+Garanta que:
+- O botão leve diretamente ao checkout da Kiwify.
+- A responsividade continue perfeita no celular.
+- O fundo continue branco com destaque no botão.

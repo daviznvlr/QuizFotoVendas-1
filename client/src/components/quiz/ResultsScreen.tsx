@@ -40,7 +40,7 @@ export function ResultsScreen({ profile, onContinue, progress }: ResultsScreenPr
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div className="flex-1 flex flex-col px-6 py-8">
-        <div className="w-full max-w-md mx-auto flex-1 flex flex-col">
+        <div className="w-full max-w-md mx-auto flex-1 flex flex-col justify-center">
           <div className="mb-8">
             <Logo />
           </div>
@@ -51,59 +51,45 @@ export function ResultsScreen({ profile, onContinue, progress }: ResultsScreenPr
             </div>
           )}
 
-          <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 leading-tight">
-            🎉 Parabéns! Seu perfil é ideal para lucrar com Panetones Gourmet neste Natal!
-          </h2>
+          <div className="text-center space-y-6">
+            <h2 className="text-[26px] font-extrabold leading-tight" style={{ color: '#1a1a1a' }}>
+              🎉 Parabéns! Seu perfil mostra que você tem alto potencial para lucrar com Panetones Gourmet neste Natal!
+            </h2>
 
-          <p className="text-base text-center text-muted-foreground mb-8 leading-relaxed" data-testid="text-transition">
-            Suas respostas mostram que você tem o perfil certo para começar a lucrar com panetones gourmet — e o melhor: ainda dá tempo de aproveitar a alta demanda de fim de ano.
-            Eu preparei um plano passo a passo com receitas, estratégias e precificação para você começar do zero e lucrar direto da sua cozinha!
-          </p>
+            <p className="text-[17px] leading-relaxed" style={{ color: '#444', marginTop: '10px' }} data-testid="text-transition">
+              Você já tem tudo o que precisa pra começar — falta apenas o método certo. 
+              E é exatamente isso que o <strong>Método Panetone Gourmet Lucrativo</strong> entrega:
+              receitas testadas, guia de precificação e estratégias simples pra vender rápido.
+            </p>
 
-          <div className="space-y-6 flex-1">
-            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-xl p-6 shadow-lg">
-              <div className="flex flex-col items-center justify-center space-y-4 text-white">
-                <div className="bg-white/10 rounded-full p-3 backdrop-blur-sm">
-                  <Award className="w-8 h-8 text-success" />
-                </div>
-                
-                <div className="text-center space-y-3 w-full">
-                  <p className="text-sm font-medium opacity-90">Potencial de Vendas</p>
-                  <div className="bg-white rounded-lg px-6 py-3 shadow-md">
-                    <p className={`text-4xl font-bold ${getPotentialColor(profile.potential)}`} data-testid="text-potential-label">
-                      {profile.potential.toUpperCase()}
-                    </p>
-                  </div>
-                  <div className="pt-2 border-t border-white/20">
-                    <p className="text-2xl font-bold" data-testid="text-rank-score">
-                      {profile.score}/100
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div style={{ margin: '20px auto' }}>
+              <p className="text-[17px] font-semibold" style={{ color: '#e67e22' }}>
+                💡 Promoção exclusiva: de <s>R$97,00</s> por apenas <strong>R$27,00</strong> — só hoje!
+              </p>
             </div>
 
-            {profile.insights && profile.insights.length > 0 && (
-              <div className="space-y-3">
-                <h3 className="font-semibold text-lg">Por que este é seu perfil:</h3>
-                {profile.insights.map((insight, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 bg-accent rounded-lg">
-                    <TrendingUp className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-sm">{insight}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+            <Button
+              onClick={() => window.location.href = 'https://ivory-horse-718246.hostingersite.com/'}
+              size="lg"
+              className="w-full text-lg font-bold animate-pulse-cta transition-all hover:scale-[1.03]"
+              style={{ 
+                backgroundColor: '#f7c948', 
+                color: '#1a1a1a',
+                padding: '18px 35px',
+                borderRadius: '12px',
+                boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+                height: 'auto',
+                marginTop: '25px'
+              }}
+              data-testid="button-continue"
+            >
+              Quero Começar Agora 🎄
+            </Button>
 
-          <Button
-            onClick={handleContinue}
-            size="lg"
-            className="w-full h-14 text-lg font-semibold mt-8 bg-success hover:bg-success/90 text-success-foreground animate-pulse-cta"
-            data-testid="button-continue"
-          >
-            💛 Gerar meu plano personalizado →
-          </Button>
+            <p className="text-[15px]" style={{ color: '#666', marginTop: '15px' }}>
+              ⚠️ Atenção: essa condição é válida apenas para novos alunos e expira hoje à meia-noite.
+            </p>
+          </div>
         </div>
       </div>
     </div>

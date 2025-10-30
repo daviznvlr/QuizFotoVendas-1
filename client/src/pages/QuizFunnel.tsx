@@ -110,23 +110,21 @@ export default function QuizFunnel() {
   };
 
   const experienceOptions: QuestionOption[] = [
-    { id: "nenhum", label: "🙂 Nenhum, mas adoro aprender coisas novas.", icon: "BookOpen" },
-    { id: "vez-quando", label: "😐 Já faço doces de vez em quando", icon: "Coffee" },
-    { id: "experiencia", label: "😍 Tenho experiência e quero dominar os panetones gourmet", icon: "Award" },
+    { id: "sim", label: "Sim, amo confeitar e sonho com isso!", icon: "Heart" },
+    { id: "talvez", label: "Tenho vontade, mas ainda não decidi", icon: "Smile" },
+    { id: "nao", label: "Não, só quero aprender receitas", icon: "BookOpen" },
   ];
 
   const revenueOptions: QuestionOption[] = [
-    { id: "ate-2000", label: "💰 Até R$2.000,00", icon: "TrendingUp" },
-    { id: "2000-5000", label: "💵 Entre R$2.000,00 e R$ 5.000,00", icon: "TrendingUp" },
-    { id: "mais-5000", label: "🤑 Mais de R$5.000,00", icon: "TrendingUp" },
-    { id: "nao-pensei", label: "🤔 Ainda não pensei nisso, mas adoraria ter um lucro extra", icon: "HelpCircle" },
+    { id: "sim", label: "Sim, acredito que posso!", icon: "TrendingUp" },
+    { id: "duvida", label: "Tenho dúvidas, mas quero tentar", icon: "HelpCircle" },
+    { id: "nao-sei", label: "Não sei se é possível", icon: "AlertCircle" },
   ];
 
   const obstacleOptions: QuestionOption[] = [
-    { id: "tempo", label: "⏰ Falta de tempo", icon: "Clock" },
-    { id: "medo", label: "😰 Medo de não dar certo", icon: "AlertCircle" },
-    { id: "dinheiro", label: "💸 Falta de dinheiro para investir", icon: "Wallet" },
-    { id: "nao-sei", label: "🤷 Não sei por onde começar", icon: "HelpCircle" },
+    { id: "sim", label: "Sim, adoraria ter acesso!", icon: "Award" },
+    { id: "talvez", label: "Talvez, depende do preço", icon: "DollarSign" },
+    { id: "nao", label: "Não, prefiro aprender sozinha", icon: "BookOpen" },
   ];
 
   if (isLoading) {
@@ -139,7 +137,7 @@ export default function QuizFunnel() {
       
       {currentStep === 1 && (
         <QuestionScreen
-          question="Qual é o seu nível de experiência na cozinha?"
+          question="Você ama confeitar e sonha em transformar isso em uma renda real?"
           options={experienceOptions}
           onSelect={handleExperienceSelect}
           selectedValue={quizState.experience}
@@ -148,7 +146,7 @@ export default function QuizFunnel() {
 
       {currentStep === 2 && (
         <QuestionScreen
-          question="Quanto você gostaria de faturar com panetones neste Natal?"
+          question="Você acredita que pode começar do zero e ainda faturar neste Natal?"
           options={revenueOptions}
           onSelect={handleRevenueSelect}
           selectedValue={quizState.revenueGoal}
@@ -157,7 +155,7 @@ export default function QuizFunnel() {
 
       {currentStep === 3 && (
         <QuestionScreen
-          question="O que mais te impede de começar algo novo para ganhar uma renda extra?"
+          question="Você gostaria de ter acesso a receitas gourmet testadas e aprovadas?"
           options={obstacleOptions}
           onSelect={handleObstacleSelect}
           selectedValue={quizState.obstacle}

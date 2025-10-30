@@ -15,7 +15,7 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
         
         <div className="text-center space-y-3">
           <h1 className="text-[27px] font-extrabold leading-[1.3]" style={{ color: '#1a1a1a' }}>
-            🎄 Descubra se você tem o perfil certo para faturar com Panetones Gourmet neste Natal!
+            🧁 Descubra se você tem o perfil certo para faturar com Panetones Gourmet neste Natal!
           </h1>
           
           <p className="text-base md:text-lg" style={{ color: '#555', marginTop: '10px' }}>
@@ -46,7 +46,7 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
           </Button>
         </div>
 
-        <p className="text-sm text-center" style={{ color: '#666', marginTop: '18px' }}>
+        <p className="text-sm text-center" style={{ color: '#666', marginTop: '23px' }}>
           👩‍🍳 Mais de <strong>1.200 mulheres</strong> já descobriram seu perfil e começaram a lucrar de casa!
         </p>
       </div>
